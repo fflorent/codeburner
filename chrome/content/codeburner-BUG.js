@@ -459,7 +459,7 @@ FBL.ns(function() { with (FBL) {
 		initialize: function()
 		{
 			//if the version number dependency is met
-			if(parseFloat(Firebug.version) >= parseFloat(Firebug.CodeBurner['firebug-version']))
+			if(this.isFirebugVersionOk())
 			{
 				//platform-specific stylesheets don't seem to be working in this context
 				//probably because firebug already uses them itself
@@ -506,6 +506,10 @@ FBL.ns(function() { with (FBL) {
 		},
 
 
+		isFirebugVersionOk: function()
+		{
+			return FBL.checkFirebugVersion(Firebug.CodeBurner['firebug-version']) >= 0;
+		},
 
 
 
@@ -526,8 +530,10 @@ FBL.ns(function() { with (FBL) {
 		showPanel: function(browser, panel)
 		{
 			//if the version number dependency is met
-			if(parseFloat(Firebug.version) >= parseFloat(Firebug.CodeBurner['firebug-version']))
+			if(this.isFirebugVersionOk())
 			{
+				if (!panel)
+					return;
 				//if this is the stylesheet or reference panel
 				if(panel.name == 'stylesheet' || panel.name == this.panelnames['reference'])
 				{
@@ -599,7 +605,7 @@ FBL.ns(function() { with (FBL) {
 				panel.panelNode.className = panel.panelNode.className.replace(/ narrow/g, '');
 
 				//if the version number dependency is met
-				if(parseFloat(Firebug.version) >= parseFloat(Firebug.CodeBurner['firebug-version']))
+				if(this.isFirebugVersionOk())
 				{
 					//if our panel has never been opened before,
 					//add the framework and default content
@@ -732,7 +738,7 @@ FBL.ns(function() { with (FBL) {
 			//or if it's the HTML panel ("HTML" tab) or the stylesheet panel ("CSS" tab)
 			//and if the version number dependency is met
 			else if((panel.name == 'html' || panel.name == 'stylesheet')
-				&& (parseFloat(Firebug.version) >= parseFloat(Firebug.CodeBurner['firebug-version'])))
+				&& (this.isFirebugVersionOk()))
 			{
 				//get a reference to the context menu, if not already defined
 				if(typeof this.contextmenu == 'undefined')
@@ -783,8 +789,10 @@ FBL.ns(function() { with (FBL) {
 		showSidePanel: function(browser, panel)
 		{
 			//if the version number dependency is met
-			if(parseFloat(Firebug.version) >= parseFloat(Firebug.CodeBurner['firebug-version']))
+			if(this.isFirebugVersionOk())
 			{
+				if (!panel)
+					return;
 				//clear any running code example load timer
 				clearInterval(this.egtimer);
 				this.egtimer = null;
@@ -907,7 +915,7 @@ FBL.ns(function() { with (FBL) {
 		reattachContext: function(browser, context)
 		{
 			//if the version number dependency is met
-			if(parseFloat(Firebug.version) >= parseFloat(Firebug.CodeBurner['firebug-version']))
+			if(this.isFirebugVersionOk())
 			{
 				//get a reference to the external window and its document
 				var contextwin = context.chrome.window,

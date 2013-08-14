@@ -266,7 +266,7 @@ Firebug.registerPanel(CodeBurnerReferencePanel);
 
 //if the firebug version is sufficient, register the example panes too
 //[if it isn't you'd never get the chance to open them anyway!]
-if(parseFloat(Firebug.version) >= parseFloat(Firebug.CodeBurner['firebug-version']))
+if(Firebug.CodeBurner.isFirebugVersionOk())
 {
 	Firebug.registerPanel(CodeBurnerExampleHTMLPanel);
 	Firebug.registerPanel(CodeBurnerExampleCSSPanel);
