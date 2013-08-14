@@ -16,7 +16,7 @@ FBL.ns(function() { with (FBL) {
 
 
 
-
+	var Firefox = Firebug.require("firebug/chrome/firefox");
 
 	//firebug.codeburner object is the main dude
 	Firebug.CodeBurner = extend(Firebug.Module,
@@ -1265,7 +1265,7 @@ FBL.ns(function() { with (FBL) {
 		},
 
 
-
+		// xxxFlorent: window.getComputedStyle(elt, [pseudoelt])? https://developer.mozilla.org/en-US/docs/Web/API/window.getComputedStyle
 		//get style information for an element,
 		//so that we can do property and selector autosearches
 		getStyleInformation: function(browser, element)
@@ -2267,7 +2267,7 @@ FBL.ns(function() { with (FBL) {
 			}
 
 			//get a browser reference and save it to args[0]
-			args[0] = document.getElementById('content').selectedBrowser;
+			args[0] = Firefox.getCurrentBrowser();
 
 			//show and uncollapse the side panels deck
 			//(we have to hide them when detaching firebug)
