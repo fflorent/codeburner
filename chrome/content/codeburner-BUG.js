@@ -661,11 +661,8 @@ FBL.ns(function() { with (FBL) {
 							var href = target.getAttribute('href');
 							if(href != null && !/actionlink/.test(target.className))
 							{
-								//ff3.6 needs the second argument to be an object
-								//but earlier versions need it to be null!
-								try { $('content').addTab(href, null); }
-								catch(err) { $('content').addTab(href, {}); }
 								e.preventDefault();
+								FBL.openNewTab(href);
 							}
 						}, false);
 						
@@ -723,13 +720,11 @@ FBL.ns(function() { with (FBL) {
 					//bind a click listener to handle links
 					panel.panelNode.addEventListener('click', function(e)
 					{
-						if(e.target.getAttribute('href'))
+						var href = e.target.getAttribute("href");
+						if(href)
 						{
-							//ff3.6 needs the second argument to be an object
-							//but earlier versions need it to be null!
-							try { $('content').addTab(e.target.getAttribute('href'), null); }
-							catch(err) { $('content').addTab(e.target.getAttribute('href'), {}); }
 							e.preventDefault();
+							FBL.openNewTab(href);
 						}
 					}, false);
 				}
@@ -829,11 +824,8 @@ FBL.ns(function() { with (FBL) {
 							var href = target.getAttribute('href');
 							if(href && target.className && /morelink/.test(target.className))
 							{
-								//ff3.6 needs the second argument to be an object
-								//but earlier versions need it to be null!
-								try { $('content').addTab(href, null); }
-								catch(err) { $('content').addTab(href, {}); }
 								e.preventDefault();
+								FBL.openNewTab(href);
 								return false;
 							}
 							return true;

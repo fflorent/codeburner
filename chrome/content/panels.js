@@ -83,17 +83,12 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 					nol10n: true,
 					command: function()
 					{
+						// xxxFlorent: Not so clean...
 						var href = target.parentNode.parentNode.nextSibling.nextSibling
 							.getElementsByTagName('a').item(0).getAttribute('href');
 						if(href) //just for safety
 						{
-							//nb. had to change the second argument from null to empty object
-							//to avoid a "params is null" excepion in firefox 3.6
-							//OLD//$('content').addTab(href, {})
-							//ff3.6 needs the second argument to be an object
-							//but earlier versions need it to be null!
-							try { $('content').addTab(href, null); } 
-							catch(err) { $('content').addTab(href, {}); } 
+							FBL.openNewTab(href);
 						}
 					}
 				}
@@ -122,18 +117,11 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 									.getElementsByTagName('a').item(0).getAttribute('href');
 								if(href) //just for safety
 								{
-									//nb. had to change the second argument from null to empty object
-									//to avoid a "params is null" excepion in firefox 3.6
-									//OLD//$('content').addTab(href + '/demo', {})
-									//we need to cater for the query-tracker, and insert the demo fragment before it
 									var sphref = href.replace(
 										Firebug.CodeBurner.queryTracker,
 										'/demo' + Firebug.CodeBurner.queryTracker
 										);
-									//ff3.6 needs the second argument to be an object
-									//but earlier versions need it to be null!
-									try { $('content').addTab(sphref, null); } 
-									catch(err) { $('content').addTab(sphref, {}); } 
+									FBL.openNewTab(sphref);
 								}
 							}
 						}
