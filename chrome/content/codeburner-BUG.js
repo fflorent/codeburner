@@ -1451,7 +1451,7 @@ FBL.ns(function() { with (FBL) {
 			var atruletypes = [], 
 			add = function(artype)
 			{
-				if(!CodeBurner.arrayContains(atruletypes, artype)) 
+				if(!Firebug.CodeBurner.arrayContains(atruletypes, artype))
 				{ 
 					atruletypes.push(artype); 
 				}
