@@ -1275,7 +1275,7 @@ FBL.ns(function() { with (FBL) {
 
 			//first we have to create a new tab context, so we have access to the getPanelType method...
 			//[we can't just use an existing context reference, that doesn't give us method access]
-			var context = new Firebug.TabContext(window, browser, browser.chrome, false);
+			var context = new Firebug.TabContext(window, browser, Firebug.chrome, false);
 
 			//so that we can get a reference to the CSSElementPanel object...
 			var paneltype = Firebug.getPanelType('css');
@@ -2293,7 +2293,7 @@ FBL.ns(function() { with (FBL) {
 			//and it will autopopulate with the saved args
 			else
 			{
-				browser.chrome.selectSidePanel(egpanel.name);
+				Firebug.chrome.selectSidePanel(egpanel.name);
 			}
 		},
 
@@ -2436,7 +2436,7 @@ FBL.ns(function() { with (FBL) {
 					//and it will autopopulate with the saved data
 					else
 					{
-						browser.chrome.selectSidePanel(tool.panelnames['example-html']);
+						Firebug.chrome.selectSidePanel(tool.panelnames['example-html']);
 					}
 
 				}, target.ownerDocument);
@@ -2603,7 +2603,7 @@ FBL.ns(function() { with (FBL) {
 					//	  and then switching to the reference tab manually
 					//but if it's not a special search, do a lookup search with the target
 					special == true
-						? browser.chrome.selectPanel(tool.panelnames['reference'])
+						? Firebug.chrome.selectPanel(tool.panelnames['reference'])
 						: tool.lookupSearch(browser, node, type, owner);
 
 				});
@@ -2633,7 +2633,7 @@ FBL.ns(function() { with (FBL) {
 					//and it will autopopulate with the saved data
 					else
 					{
-						browser.chrome.selectSidePanel(tool.panelnames['example-html']);
+						Firebug.chrome.selectSidePanel(tool.panelnames['example-html']);
 					}
 				});
 			}
@@ -2820,7 +2820,7 @@ FBL.ns(function() { with (FBL) {
 					//and it will autopopulate with the saved data
 					else
 					{
-						browser.chrome.selectSidePanel(egpanel.name);
+						Firebug.chrome.selectSidePanel(egpanel.name);
 					}
 				});
 			}
@@ -2874,7 +2874,7 @@ FBL.ns(function() { with (FBL) {
 					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-stylesheet'])
 
 					//open the example panel
-					browser.chrome.selectSidePanel(egpanel.name);
+					Firebug.chrome.selectSidePanel(egpanel.name);
 
 					//populate it with information about the first selector
 					tool.populateExamplePanel(browser, selectortypes[0], 'selectors', null);
@@ -2911,7 +2911,7 @@ FBL.ns(function() { with (FBL) {
 					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-stylesheet'])
 
 					//open the example panel
-					browser.chrome.selectSidePanel(egpanel.name);
+					Firebug.chrome.selectSidePanel(egpanel.name);
 
 					//populate it with information about the at-rule
 					tool.populateExamplePanel(browser, atrule, 'atrules', null);
@@ -3629,7 +3629,7 @@ FBL.ns(function() { with (FBL) {
 			//open our panel, and collapse its side deck
 			//(not usually necessary, but might be when firebug is detached
 			//and we haven't yet viewed the reference panel in this detachment session)
-			browser.chrome.selectPanel(this.panelnames['reference']);
+			Firebug.chrome.selectPanel(this.panelnames['reference']);
 			this.collapseSidePanelsDeck();
 
 			//clear the output area
