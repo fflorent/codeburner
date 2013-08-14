@@ -45,7 +45,7 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 			{
 				var tool = Firebug.CodeBurner;
 				tool.clearPanelOutput();
-				tool.addDefaultContent(FirebugContext.getPanel(tool.panelnames['reference']));
+				tool.addDefaultContent(Firebug.currentContext.getPanel(tool.panelnames['reference']));
 				tool.setAreaSelections('*');
 				tool.searchform.query.value = '';
 			}}];

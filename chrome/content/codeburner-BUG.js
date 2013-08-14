@@ -590,7 +590,7 @@ FBL.ns(function() { with (FBL) {
 			//create a global reference to our main reference panel
 			//we have to create it every time in order for it to work
 			//when multiple instances are open (in different tabs)
-			this.panel = FirebugContext.getPanel(this.panelnames['reference']);
+			this.panel = Firebug.currentContext.getPanel(this.panelnames['reference']);
 
 			//if this is our reference panel ("Reference" tab)
 			if(panel == this.panel)
@@ -678,7 +678,7 @@ FBL.ns(function() { with (FBL) {
 					if(typeof this.noautosearch == 'undefined')
 					{
 						//get a reference to the html panel
-						var htmlpanel = FirebugContext.getPanel('html');
+						var htmlpanel = Firebug.currentContext.getPanel('html');
 
 						//if we have a selection in that panel
 						//(almost always true, except when our panel is the first to be viewed this session)
@@ -769,7 +769,7 @@ FBL.ns(function() { with (FBL) {
 					setTimeout(function()
 					{
 						Firebug.CodeBurner.showSidePanel(browser,
-							FirebugContext.getPanel(
+							Firebug.currentContext.getPanel(
 								Firebug.CodeBurner.panelnames['example-' + panel.name]));
 					}, 100);
 
@@ -851,7 +851,7 @@ FBL.ns(function() { with (FBL) {
 					if(panel.name == this.panelnames['example-html'])
 					{
 						//get a reference to the master panel
-						var htmlpanel = FirebugContext.getPanel('html');
+						var htmlpanel = Firebug.currentContext.getPanel('html');
 
 						//if we have selection data saved
 						if(typeof htmlpanel.egselectiondata != 'undefined')
@@ -882,7 +882,7 @@ FBL.ns(function() { with (FBL) {
 					else if(panel.name == this.panelnames['example-stylesheet'])
 					{
 						//get a reference to the master panel
-						var csspanel = FirebugContext.getPanel('stylesheet');
+						var csspanel = Firebug.currentContext.getPanel('stylesheet');
 
 						//if we have selection data saved
 						if(typeof csspanel.egselectiondata != 'undefined')
@@ -897,7 +897,7 @@ FBL.ns(function() { with (FBL) {
 					else if(panel.name == this.panelnames['example-reference'])
 					{
 						//get a reference to the master panel
-						var refpanel = FirebugContext.getPanel('reference');
+						var refpanel = Firebug.currentContext.getPanel('reference');
 
 						//if we have selection data saved
 						if(typeof refpanel.egselectiondata != 'undefined')
@@ -1035,8 +1035,8 @@ FBL.ns(function() { with (FBL) {
 		collapseSidePanelsDeck: function()
 		{
 			var tool = Firebug.CodeBurner;
-			if(FirebugContext.getPanel('stylesheet').visible == true
-				|| FirebugContext.getPanel(tool.panelnames['reference']).visible == true)
+			if(Firebug.currentContext.getPanel('stylesheet').visible == true
+				|| Firebug.currentContext.getPanel(tool.panelnames['reference']).visible == true)
 			{
 				tool.splitter.setAttribute('collapsed', 'true');
 				tool.deck.setAttribute('collapsed', 'true');
@@ -1089,17 +1089,17 @@ FBL.ns(function() { with (FBL) {
 		getVisiblePanel: function()
 		{
 			//** speculative fix for reported console2 bug
-			if(!FirebugContext) { return null; }
+			if(!Firebug.currentContext) { return null; }
 
 			var panelnames = ['html', 'stylesheet', this.panelnames['reference']],
 				currentPanel = { 'panel' : null, 'egpanel' : null };
 			for(var i=0; i<panelnames.length; i++)
 			{
-				var panel = FirebugContext.getPanel(panelnames[i]);
+				var panel = Firebug.currentContext.getPanel(panelnames[i]);
 				if(panel.visible == true)
 				{
 					currentPanel.panel = panel;
-					currentPanel.egpanel = FirebugContext.getPanel(this.panelnames['example-' + panel.name]);
+					currentPanel.egpanel = Firebug.currentContext.getPanel(this.panelnames['example-' + panel.name]);
 				}
 			}
 			return currentPanel;
@@ -1109,11 +1109,11 @@ FBL.ns(function() { with (FBL) {
 		//from among the panels we add contextmenu items to
 		getPanelFromNode: function(node)
 		{
-			//sometimes FirebugContext returns null, which thence throws an error on line 992 below
+			//sometimes Firebug.currentContext returns null, which thence throws an error on line 992 below
 			//so check that and return a null panel if so
 			//this only appears to happen when firebug isn't being used, 
 			//so *I think* it's okay to do this without loss of practical functionality
-			if(!FirebugContext) { return null; }
+			if(!Firebug.currentContext) { return null; }
 			
 			var tool = Firebug.CodeBurner;
 			while(!node.className || node.className.indexOf('panelNode') == -1)
@@ -1124,7 +1124,7 @@ FBL.ns(function() { with (FBL) {
 			var panelnames = ['html','css','stylesheet'];
 			for(var i=0; i<panelnames.length; i++)
 			{
-				var panel = FirebugContext.getPanel(panelnames[i]);
+				var panel = Firebug.currentContext.getPanel(panelnames[i]);
 				if(panel.panelNode == node)
 				{
 					break;
@@ -1907,11 +1907,11 @@ FBL.ns(function() { with (FBL) {
 			var tool = Firebug.CodeBurner;
 
 			//get the html panel and a browser reference
-			var htmlpanel = FirebugContext.getPanel('html');
+			var htmlpanel = Firebug.currentContext.getPanel('html');
 			var browser = htmlpanel.context.browser
 
 			//if the example-html panel is open,
-			if(FirebugContext.getPanel(tool.panelnames['example-html']).visible == true)
+			if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 			{
 				//delete the selection data property, so that if you switch away and back
 				//to this tab, the last selection is still there (but we don't delete it when
@@ -1990,7 +1990,7 @@ FBL.ns(function() { with (FBL) {
 			node = node.toLowerCase().replace(/^([a-z1-6]+).*$/, '$1');
 
 			//get a browser reference from the example panel
-			var browser = FirebugContext.getPanel(tool.panelnames['example-html']).context.browser;
+			var browser = Firebug.currentContext.getPanel(tool.panelnames['example-html']).context.browser;
 
 			//if we dont have the elements area dictonary, load it now
 			if(CodeBurnerDictionary['elements'] == null) { Firebug.CodeBurner.loadDictionary('elements'); }
@@ -2002,12 +2002,12 @@ FBL.ns(function() { with (FBL) {
 				&& typeof CodeBurnerDictionary['elements'][node] != 'undefined')
 			{
 				//if the example-html panel is open,
-				if(FirebugContext.getPanel(tool.panelnames['example-html']).visible == true)
+				if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 				{
 					//delete the selection data property, so that if you switch away and back
 					//to this tab, the last selection is still there (but we don't delete it when
 					//viewing that example, for the same reason)
-					delete FirebugContext.getPanel('html').egselectiondata;
+					delete Firebug.currentContext.getPanel('html').egselectiondata;
 
 					//now populate the panel with this selection
 					tool.populateExamplePanel(browser, node, 'elements', null);
@@ -2015,7 +2015,7 @@ FBL.ns(function() { with (FBL) {
 				//otherwise just save this information in lieu of its next opening
 				else
 				{
-					FirebugContext.getPanel('html').egselectiondata = [browser, node, 'elements', null];
+					Firebug.currentContext.getPanel('html').egselectiondata = [browser, node, 'elements', null];
 				}
 			}
 		},
@@ -2071,12 +2071,12 @@ FBL.ns(function() { with (FBL) {
 			if(node != null && area != null)
 			{
 				//if the example-html panel is open,
-				if(FirebugContext.getPanel(this.panelnames['example-html']).visible == true)
+				if(Firebug.currentContext.getPanel(this.panelnames['example-html']).visible == true)
 				{
 					//delete the selection data property, so that if you switch away and back
 					//to this tab, the last selection is still there (but we don't delete it when
 					//viewing that example, for the same reason)
-					delete FirebugContext.getPanel('html').egselectiondata;
+					delete Firebug.currentContext.getPanel('html').egselectiondata;
 
 					//now populate the panel with this selection
 					this.populateExamplePanel(browser, node, area, owner);
@@ -2088,7 +2088,7 @@ FBL.ns(function() { with (FBL) {
 				//it feels safer to save this data to a stable panel
 				else
 				{
-					FirebugContext.getPanel('html').egselectiondata = [browser, node, area, owner];
+					Firebug.currentContext.getPanel('html').egselectiondata = [browser, node, area, owner];
 				}
 			}
 		},
@@ -2229,12 +2229,12 @@ FBL.ns(function() { with (FBL) {
 			if(egdata.length > 0)
 			{
 				//if the example-stylesheet panel is open,
-				if(FirebugContext.getPanel(this.panelnames['example-stylesheet']).visible == true)
+				if(Firebug.currentContext.getPanel(this.panelnames['example-stylesheet']).visible == true)
 				{
 					//delete the selection data property, so that if you switch away and back
 					//to this tab, the last selection is still there (but we don't delete it when
 					//viewing that example, for the same reason)
-					delete FirebugContext.getPanel('stylesheet').egselectiondata;
+					delete Firebug.currentContext.getPanel('stylesheet').egselectiondata;
 
 					//now populate the panel with the egdata
 					this.populateExamplePanel(browser, egdata[0], egdata[1], null);
@@ -2242,7 +2242,7 @@ FBL.ns(function() { with (FBL) {
 				//otherwise just save this information in lieu of its next opening
 				else
 				{
-					FirebugContext.getPanel('stylesheet').egselectiondata = [browser, egdata[0], egdata[1], null];
+					Firebug.currentContext.getPanel('stylesheet').egselectiondata = [browser, egdata[0], egdata[1], null];
 				}
 			}
 		},
@@ -2275,12 +2275,12 @@ FBL.ns(function() { with (FBL) {
 			this.splitter.setAttribute('collapsed', 'false');
 
 			//get a reference to the example pane
-			var egpanel = FirebugContext.getPanel(this.panelnames['example-reference'])
+			var egpanel = Firebug.currentContext.getPanel(this.panelnames['example-reference'])
 
 			//save this info to the example selection args array
 			//which will be used when the panel is re-opened
 			//without a change in reference panel selection
-			FirebugContext.getPanel(this.panelnames['reference']).egselectionargs = [args[0], args[1], args[2], args[3]];
+			Firebug.currentContext.getPanel(this.panelnames['reference']).egselectionargs = [args[0], args[1], args[2], args[3]];
 
 			//if the example panel is already open
 			//populate it with this information
@@ -2395,7 +2395,7 @@ FBL.ns(function() { with (FBL) {
 				&& typeof CodeBurnerDictionary['elements'][node] != 'undefined')
 			{
 				//get a browser reference from the example panel
-				var browser = FirebugContext.getPanel(tool.panelnames['example-html']).context.browser;
+				var browser = Firebug.currentContext.getPanel(tool.panelnames['example-html']).context.browser;
 
 				//lookup item language
 				var itemlang = tool.lang.getString('contextmenu.node')
@@ -2424,10 +2424,10 @@ FBL.ns(function() { with (FBL) {
 					//save this info to the example selection data array
 					//which will be used when the html panel is re-opened
 					//without a change in hmtl panel selection
-					FirebugContext.getPanel('html').egselectiondata = [browser, node, 'elements', null];
+					Firebug.currentContext.getPanel('html').egselectiondata = [browser, node, 'elements', null];
 
 					//if the example-html panel is already open, populate it with this information
-					if(FirebugContext.getPanel(tool.panelnames['example-html']).visible == true)
+					if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 					{
 						tool.populateExamplePanel(browser, node, 'elements', null);
 					}
@@ -2615,7 +2615,7 @@ FBL.ns(function() { with (FBL) {
 					var tool = Firebug.CodeBurner;
 
 					//save a reference to the examples panel
-					var egpanel = FirebugContext.getPanel(tool.panelnames['example-html']);
+					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-html']);
 
 					//save this info to the example selection data array
 					//which will be used when the panel is re-opened
@@ -2802,12 +2802,12 @@ FBL.ns(function() { with (FBL) {
 					}
 
 					//get a reference to the appliable example pane
-					var egpanel = FirebugContext.getPanel(
+					var egpanel = Firebug.currentContext.getPanel(
 						tool.panelnames['example-' + (panel.name == 'stylesheet' ? 'stylesheet' : 'html')])
 
 					//which will be used when the panel is re-opened
 					//without a change in hmtl panel selection
-					FirebugContext.getPanel('html').egselectiondata = [browser, property, 'properties', null];
+					Firebug.currentContext.getPanel('html').egselectiondata = [browser, property, 'properties', null];
 
 					//if the example panel is already open
 					//populate it with this information
@@ -2871,7 +2871,7 @@ FBL.ns(function() { with (FBL) {
 					tool.splitter.setAttribute('collapsed', 'false');
 
 					//get a reference to the appliable example pane
-					var egpanel = FirebugContext.getPanel(tool.panelnames['example-stylesheet'])
+					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-stylesheet'])
 
 					//open the example panel
 					browser.chrome.selectSidePanel(egpanel.name);
@@ -2908,7 +2908,7 @@ FBL.ns(function() { with (FBL) {
 					tool.splitter.setAttribute('collapsed', 'false');
 
 					//get a reference to the appliable example pane
-					var egpanel = FirebugContext.getPanel(tool.panelnames['example-stylesheet'])
+					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-stylesheet'])
 
 					//open the example panel
 					browser.chrome.selectSidePanel(egpanel.name);
@@ -2939,7 +2939,7 @@ FBL.ns(function() { with (FBL) {
 			var tool = Firebug.CodeBurner;
 
 			//get the html panel and the browser reference
-			var htmlpanel = FirebugContext.getPanel('html');
+			var htmlpanel = Firebug.currentContext.getPanel('html');
 			var browser = htmlpanel.context.browser;
 
 			//get the new selection from the html panel (including a safety condition)
@@ -2947,7 +2947,7 @@ FBL.ns(function() { with (FBL) {
 			var node = htmlpanel.selection.nodeName.toLowerCase();
 
 			//if the example-html panel is open,
-			if(FirebugContext.getPanel(tool.panelnames['example-html']).visible == true)
+			if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 			{
 				//delete the selection data property, so that if you switch away and back
 				//to this tab, the last selection is still there (but we don't delete it when
@@ -3206,7 +3206,7 @@ FBL.ns(function() { with (FBL) {
 			for(var i in this.panelnames)
 			{
 				if(!this.panelnames.hasOwnProperty(i) || !/example\-/.test(i)) { continue; }
-				var panel = FirebugContext.getPanel(this.panelnames[i]);
+				var panel = Firebug.currentContext.getPanel(this.panelnames[i]);
 				if(panel.visible == true)
 				{
 					var egpanel = panel;
