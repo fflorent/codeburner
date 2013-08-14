@@ -36,8 +36,8 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 
 	//add "help" to the options menu, which simply
 	//resets the search form and outputs the default text
-    getOptionsMenuItems: function()
-    {
+	getOptionsMenuItems: function()
+	{
 		return [{
 			label: Firebug.CodeBurner.lang.getString('optionsmenu.help'),
 			nol10n: true,
@@ -49,13 +49,13 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 				tool.setAreaSelections('*');
 				tool.searchform.query.value = '';
 			}}];
-    },
+	},
 
 	//we can add the context menu this way because we control this panel
 	//the other context listeners we added were to other panels
 	//which is why we had to inject into them manually with event listeners
-    getContextMenuItems: function(style, target)
-    {
+	getContextMenuItems: function(style, target)
+	{
 		//allow for <u> term delimeter
 		if(target.nodeName.toLowerCase() == 'u')
 		{
@@ -148,54 +148,54 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 
 	//this code comes straight from firebug - lock, stock, and the other thing
 	//it makes the search box top right work, to search through search results tables
-    search: function(text)
-    {
-        if (!text)
-        {
-            delete this.currentSearch;
-            return false;
-        }
+	search: function(text)
+	{
+		if (!text)
+		{
+			delete this.currentSearch;
+			return false;
+		}
 
-        var row;
-        if (this.currentSearch && text == this.currentSearch.text)
-        {
-            row = this.currentSearch.findNext(true);
-        }
-        else
-        {
-            if (this.editing)
-            {
-                this.currentSearch = new TextSearch(this.stylesheetEditor.box);
-                row = this.currentSearch.find(text);
+		var row;
+		if (this.currentSearch && text == this.currentSearch.text)
+		{
+			row = this.currentSearch.findNext(true);
+		}
+		else
+		{
+			if (this.editing)
+			{
+				this.currentSearch = new TextSearch(this.stylesheetEditor.box);
+				row = this.currentSearch.find(text);
 
-                if (row)
-                {
-                    var sel = this.document.defaultView.getSelection();
-                    sel.removeAllRanges();
-                    sel.addRange(this.currentSearch.range);
-                    scrollSelectionIntoView(this);
-                    return true;
-                }
-                else
-                    return false;
-            }
-            else
-            {
-                function findRow(node) { return node.nodeType == 1 ? node : node.parentNode; }
-                this.currentSearch = new TextSearch(this.panelNode, findRow);
-                row = this.currentSearch.find(text);
-            }
-        }
+				if (row)
+				{
+					var sel = this.document.defaultView.getSelection();
+					sel.removeAllRanges();
+					sel.addRange(this.currentSearch.range);
+					scrollSelectionIntoView(this);
+					return true;
+				}
+				else
+					return false;
+			}
+			else
+			{
+				function findRow(node) { return node.nodeType == 1 ? node : node.parentNode; }
+				this.currentSearch = new TextSearch(this.panelNode, findRow);
+				row = this.currentSearch.find(text);
+			}
+		}
 
-        if (row)
-        {
-            this.document.defaultView.getSelection().selectAllChildren(row);
-            scrollIntoCenterView(row, this.panelNode);
-            return true;
-        }
-        else
-            return false;
-    }
+		if (row)
+		{
+			this.document.defaultView.getSelection().selectAllChildren(row);
+			scrollIntoCenterView(row, this.panelNode);
+			return true;
+		}
+		else
+			return false;
+	}
 });
 
 
@@ -208,7 +208,7 @@ function CodeBurnerExampleHTMLPanel() {}
 CodeBurnerExampleHTMLPanel.prototype = extend(Firebug.Panel,
 {
 	name: Firebug.CodeBurner.panelnames['example-html'],
-    parentPanel: 'html',
+	parentPanel: 'html',
 	title: Firebug.CodeBurner.lang.getString('tab.example'),
 	searchable: false,
 	editable: false,
@@ -225,7 +225,7 @@ function CodeBurnerExampleCSSPanel() {}
 CodeBurnerExampleCSSPanel.prototype = extend(Firebug.Panel,
 {
 	name: Firebug.CodeBurner.panelnames['example-stylesheet'],
-    parentPanel: 'stylesheet',
+	parentPanel: 'stylesheet',
 	title: Firebug.CodeBurner.lang.getString('tab.example'),
 	searchable: false,
 	editable: false,
@@ -242,7 +242,7 @@ function CodeBurnerExampleReferencePanel() {}
 CodeBurnerExampleReferencePanel.prototype = extend(Firebug.Panel,
 {
 	name: Firebug.CodeBurner.panelnames['example-reference'],
-    parentPanel: Firebug.CodeBurner.panelnames['reference'],
+	parentPanel: Firebug.CodeBurner.panelnames['reference'],
 	title: Firebug.CodeBurner.lang.getString('tab.example'),
 	searchable: false,
 	editable: false,
