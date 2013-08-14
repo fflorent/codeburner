@@ -1,0 +1,718 @@
+/* SPREF1.6 :: CodeBurner for Firebug v1.6
+//******************************************************************************
+// Copyright (c) 2010 SitePoint Pty Ltd. -- http://www.sitepoint.com/
+// Written by brothercake -- http://www.brothercake.com/
+//******************************************************************************
+// This contains rules for our main panel and search results
+//*****************************************************************************/
+
+
+
+
+/* global reset inside our panel */
+.panelNode-reference *
+{
+	margin:0;
+	padding:0;
+}
+
+
+
+/* panel document has a permanent scroll bar for visual stability
+   to stop the search form moving around as it appears/disappears */
+.panelNode-reference
+{
+	overflow-y:scroll;
+	background:url(chrome://sitepointreference/content/images/panel-background.png) #fefdfa;
+}
+
+
+
+
+
+/* extension unsupported message */
+#spref-unsupported
+{
+	width:100%;
+	padding:0 242px 20px 0;
+	-moz-box-sizing:border-box;
+}
+
+#spref-unsupported h1
+{
+	font:normal normal normal 1.3em arial,sans-serif;
+	border-bottom:1px solid #666;
+	border-top:1px solid #ddd;
+	margin:10px 10px 15px 10px;
+	color:#557;
+	padding:5px 7px;
+	background:#eee;
+
+	background:url(chrome://sitepointreference/content/images/noresults.png) #eee no-repeat 7px 50%;
+	padding-left:28px
+}
+
+#spref-unsupported p
+{
+	margin:10px 15px;
+	font-size:1.1em;
+	line-height:1.4;
+	color:#666;
+}
+
+#spref-unsupported p strong
+{
+	font:normal bold normal 1em arial, sans-serif;
+}
+
+#spref-unsupported p a:hover,
+#spref-unsupported p a:focus
+{
+	text-decoration:underline;
+	color:#f60;
+}
+
+
+
+
+/* main output area */
+#spref-output
+{
+	float:left;
+	width:100%;
+	padding:0 242px 20px 0;
+	-moz-box-sizing:border-box;
+}
+
+
+
+
+/* default content */
+#spref-output h1
+{
+	font:normal normal normal 1.5em arial,sans-serif;
+	border-bottom:1px solid #666;
+	border-top:1px solid #ddd;
+	margin:10px 10px 15px 10px;
+	color:#446;
+	padding:6px 8px 5px 8px;
+	background:#eee;
+}
+
+#spref-output p
+{
+	margin:10px 15px;
+	font-size:1.1em;
+	line-height:1.4;
+	color:#333;
+}
+
+#spref-output a:hover,
+#spref-output a:focus
+{
+	text-decoration:underline;
+	color:#f60;
+}
+
+#spref-output p.intro1
+{
+	min-height:64px;
+	background:url(chrome://sitepointreference/content/images/midi-logo.png) no-repeat;
+	padding:5px 0 0 66px;
+	position:relative;
+	top:-6px;
+	margin-bottom:-10px;
+}
+
+#spref-output p.intro1 q
+{
+	font:normal bold normal 1em arial, sans-serif;
+}
+
+
+#spref-output p.copyright
+{
+	padding-top:50px;
+	margin-bottom:-5px;
+	color:#446;
+}
+
+#spref-output p.copyright a, 
+#spref-output p.intro1 a, 
+#spref-output p.intro4 a
+{
+	color:inherit;
+}
+
+#spref-output p.copyright a:hover, #spref-output p.copyright a:focus,
+#spref-output p.intro1 a:hover, #spref-output p.intro1 a:focus,
+#spref-output p.intro4 a:hover, #spref-output p.intro4 a:focus
+{
+	text-decoration:underline;
+	color:inherit;
+}
+
+#spref-output p.intro3
+{
+	font-style:italic;
+	font-size:0.97em;
+	color:#446;
+}
+
+#spref-reference-links
+{
+	width:242px;
+	position:fixed;
+	right:16px;	
+	top:16em;
+}
+
+#spref-reference-links p.intro4
+{
+	color:#446;
+	font-size:0.97em;
+}
+
+#spref-reference-links ul
+{
+	margin-left:29px;
+}
+
+
+
+
+
+
+
+/* no results messages */
+#spref-output p.noresults
+{
+	clear:both;
+	font:normal normal normal 1.3em arial,sans-serif;
+	border-bottom:1px solid #666;
+	border-top:1px solid #ddd;
+	margin:10px 10px 15px 10px;
+	padding:5px 7px;
+	color:#557;
+	background:url(chrome://sitepointreference/content/images/noresults.png) #eee no-repeat 7px 50%;
+	padding-left:28px
+}
+
+#spref-output ul.noresults-tips
+{
+	margin:0 10px 10px 10px;
+	list-style-type:bullet;
+}
+
+#spref-output ul.noresults-tips li
+{
+	margin:20px 120px -12px 28px;
+	font-size:1.1em;
+	line-height:1.6;
+	color:#666;
+}
+
+#spref-output ul.noresults-tips li a:hover,
+#spref-output ul.noresults-tips li a:focus
+{
+	text-decoration:underline;
+	color:#f60;
+}
+ 
+#spref-output h2
+{
+	float:left;
+	clear:both;
+	background:#eee;
+	color:#446;
+	border-bottom:1px solid #666;
+	border-top:1px solid #ddd;
+	font:normal normal bold 1.1em arial, sans-serif;
+	padding:5px 11px 5px 23px;
+	margin:8px 10px 4px 8px;
+	position:relative;
+	top:0;
+	left:0;
+	width:15em;
+	cursor:pointer;
+	-moz-box-shadow:1px 1px 1px rgba(80,80,80,0.3);
+}
+
+#spref-output h2:focus
+{
+	outline:1px dotted;
+	background:#ddd;
+}
+
+#spref-output h2.special
+{
+	width:25.4em;
+}
+
+#spref-output h2 strong.twisty
+{
+	display:block;
+	width:11px;
+	height:11px;
+	position:absolute;
+	left:6px;
+	top:7px;
+}
+
+
+
+
+/* search results table */
+#spref-output table, #spref-output th, #spref-output td
+{
+	border:1px solid #666;
+	border-collapse:collapse;
+}
+
+#spref-output table
+{
+	margin:-2px 10px 0 9px;
+	width:95%;
+	clear:both;
+}
+
+#spref-output table.collapsed
+{
+	display:none;
+}
+
+#spref-output th, #spref-output td
+{
+	padding:4px;
+	vertical-align:top;
+	text-align:left;
+	background:#ddd;
+	color:#333;
+}
+
+#spref-output th.key
+{
+	font:normal normal normal 1.6em monospace;
+	width:55%;
+	padding:5px 10px 3px 10px;
+	vertical-align:middle;
+	border-bottom-color:#f6f6f6;
+	background:url(chrome://sitepointreference/content/images/table-key-gradient.png) #fff repeat-x 0% 100%;
+}
+
+#spref-output th.key a
+{
+	cursor:pointer;
+	text-decoration:none !important;
+}
+#spref-output th.key a:focus
+{
+	outline:1px dotted;
+	outline-offset:1px;
+}
+#spref-output th.key a:hover
+{
+	text-decoration:underline !important;
+}
+
+#spref-output th.key.elements, #spref-output th.key.elements a
+{
+	color:#000090;
+}
+
+#spref-output th.key.attributes, #spref-output th.key.attributes a
+{
+	color:#006000;
+}
+
+#spref-output h2.otherattributes + table th.key, 
+#spref-output h2.otherattributes + table th.key a
+{
+	/*
+	color:#555;
+	*/
+	color:#006000;
+}
+
+#spref-output th.key.properties, #spref-output th.key.properties a
+{
+	color:#900000;
+}
+
+#spref-output th.key.selectors, #spref-output th.key.selectors a
+{
+	color:#007070;
+}
+
+#spref-output th.key.pseudo-node, #spref-output th.key.pseudo-node a
+{
+	color:#600090;
+}
+
+#spref-output th.key.atrules, #spref-output th.key.atrules a
+{
+	color:#707000;
+}
+
+#spref-output th.key.selectors:not(.pseudo-node), 
+#spref-output th.key.selectors:not(.pseudo-node) a,
+#spref-output th.key.atrules.mediaquery, 
+#spref-output th.key.atrules.mediaquery a
+{
+	font-family:"lucida grande",verdana,sans-serif;
+}
+#spref-output th.key.selectors:not(.pseudo-node),
+#spref-output th.key.atrules.mediaquery
+{
+	font-size:1.4em;
+}
+
+
+/* keyterm indication */
+#spref-output th.key a u
+{
+	text-decoration:none;
+	border-bottom:1px dotted;
+}
+
+#spref-output th.key a
+{
+	cursor:pointer;
+	text-decoration:none !important;
+}
+#spref-output th.key a:focus
+{
+	outline:1px dotted;
+}
+
+#spref-output th.key a:hover, #spref-output th.key a:focus
+{
+	text-decoration:underline !important;
+}
+#spref-output th.key a:hover u, #spref-output th.key a:focus u
+{
+	/* this is made transparent instead of removed, to avoid a change in height
+	   which can cause a fast, flickering alternation between the two states
+	   if the cursor is in just the right place */
+	border-bottom-color:transparent;
+}
+
+
+
+
+#spref-output td.standard
+{
+	width:24px;
+	padding:3px 4px 1px 4px;
+	vertical-align:middle;
+}
+
+#spref-output td.standard.yes 
+{ 
+	background:#e0eeff; 
+}
+#spref-output td.standard.old
+{ 
+	background:#e4e4e4; 
+}
+#spref-output td.standard.no
+{ 
+	background:#e4e4e4; 
+}
+
+#spref-output td.browsername,
+#spref-output td.supportlevel
+{
+	padding:1px 4px;
+	font-size:0.88em;
+	cursor:default;
+}
+
+#spref-output td.browsername
+{
+	background:#dee3e7;
+	color:#3f3f3f;
+	white-space:nowrap;
+}
+
+#spref-output td.supportlevel.crash
+{
+	background:#000;
+	color:#fff;
+	text-transform:uppercase;
+}
+#spref-output td.supportlevel.none
+{
+	background:#d5d5d5;
+}
+#spref-output td.supportlevel.unknown
+{
+	background:#f5f5f5;
+}
+#spref-output td.supportlevel.buggy
+{
+	background:#fbb;
+}
+#spref-output td.supportlevel.partial
+{
+	background:#fdb;
+}
+#spref-output td.supportlevel.full
+{
+	background:#beb;
+}
+
+#spref-output td.space
+{
+	background:url(chrome://sitepointreference/content/images/panel-background.png) #fefdfa;
+	padding:5px;
+	border-left-color:transparent;
+}
+#spref-output tr:last-child td.space
+{
+	border-bottom-color:transparent;
+}
+
+#spref-output td.summary
+{
+	padding:5px 5px 5px 10px;
+	font:italic normal normal 1.05em "trebuchet ms", sans-serif;
+	background:url(chrome://sitepointreference/content/images/table-summary-gradient.png) #f8f8f8 repeat-x 0% 100%;
+	color:#444;
+}
+
+#spref-output td.summary strong.owner
+{
+	color:#000090;
+	white-space:nowrap;
+	font-weight:normal;
+	font-style:normal;
+}
+
+#spref-output td.summary span
+{
+	float:left;
+	width:88%;
+}
+
+#spref-output td.summary a
+{
+	float:right;
+	width:11.5%;
+	margin:0 0.5% 0 0;
+	text-align:right;
+	color:#00f;
+	font-weight:normal;
+	font-style:normal;
+	font-family:arial,sans-serif;
+	white-space:nowrap;
+	text-decoration:underline;
+}
+
+#spref-output td.summary a:hover, 
+#spref-output td.summary a:focus
+{
+	text-decoration:underline;
+	color:#f60;
+}
+
+
+
+
+
+/* floating search form */
+#spref-searchbox
+{
+	position:fixed;
+	right:16px;
+	top:10px;
+	margin:0;
+	padding:0;
+	width:242px;
+	background:url(chrome://sitepointreference/content/images/searchbox-shadow.png) no-repeat 100% 100%;
+}
+
+#spref-searchform
+{
+	width:220px;
+	border:1px solid #666;
+	border-color:#444 #666 #666 #444;
+	color:#333;
+	background:#eee;
+	margin:0 0 10px 10px;
+}
+
+#spref-searchform fieldset
+{
+	border:none;
+}
+
+#spref-searchform legend span
+{
+	display:block;
+	width:210px;
+	padding:5px;
+	font-size:1.1em;
+	border-bottom:1px solid #666;
+	background:#789;
+	color:#fff;
+	font-weight:bold;
+	text-indent:2px;
+}
+
+#spref-searchform label
+{
+	display:block;
+	margin:11px 4px 10px 10px;
+	position:relative;
+}
+
+#spref-searchform label span
+{
+	float:left;
+	clear:left;
+	width:70px;
+	position:relative;
+	top:2px;
+}
+
+#spref-searchform input[type="text"]
+{
+	font-size:1em;
+	border:1px solid #aaa;
+	border-color:#aaa #ddd #ddd #aaa;
+	color:#333;
+	position:relative;
+	top:0px;
+}
+
+#spref-searchform input[type="text"]:disabled
+{
+	color:#aaa;
+}
+
+
+#spref-searchform div.inputgroup
+{
+	float:left;
+	margin:0 0 8px 0;
+	position:relative;
+	top:1px;
+}
+
+#spref-searchform div.inputgroup label
+{
+	margin:0 0 2px 0;
+	height:1.3em;
+}
+
+#spref-searchform div.inputgroup label span
+{
+	float:none;
+	display:inline;
+	width:auto;
+	top:-1px;
+	left:5px;
+}
+
+#spref-searchform label[for="spref-elements"] 
+{
+	margin-top:-5px;
+}
+
+
+
+
+
+/* platform-specific styling for the query input */
+[class~="platform-darwin"] #spref-searchform input[type="text"]
+{
+	background:url(chrome://sitepointreference/content/images/darwin/searchicon.png) #fff no-repeat 4px 3px;
+	-moz-border-radius:9px;
+	width:108px;
+	padding:2px 5px 2px 19px;
+	left:-4px;
+}
+[class~="platform-darwin"] #spref-searchform input[type="text"]:disabled
+{
+	background-image:url(chrome://sitepointreference/content/images/darwin/searchiconDisabled.png);
+}
+
+/* even though we could make linux different from windows, 
+   firebug doesn't, so it's better to mirror what firebug does */
+[class~="platform-winnt"] #spref-searchform input[type="text"],
+[class~="platform-linux"] #spref-searchform input[type="text"]
+{
+	background:url(chrome://sitepointreference/content/images/winnt/searchicon.png) #fff no-repeat 1px 0;
+	width:106px;
+	padding:2px 5px 2px 19px;
+	left:-1px;
+	border:1px solid #aca899;
+}
+[class~="platform-winnt"] #spref-searchform input[type="text"]:disabled,
+[class~="platform-linux"] #spref-searchform input[type="text"]:disabled
+{
+	background-image:url(chrome://sitepointreference/content/images/winnt/searchiconDisabled.png);
+}
+
+
+
+
+/*  platform-specific styling for search results caption twisty */
+[class~="platform-darwin"] #spref-output h2 strong.twisty.open
+{
+	background:url(chrome://sitepointreference/content/images/darwin/twistyOpen.png) no-repeat 0 -1px;
+}
+[class~="platform-darwin"] #spref-output h2 strong.twisty.closed
+{
+	background:url(chrome://sitepointreference/content/images/darwin/twistyClosed.png) no-repeat 0 -1px;
+}
+
+/* even though we could make linux different from windows, 
+   firebug doesn't, so it's better to mirror what firebug does */
+[class~="platform-winnt"] #spref-output h2 strong.twisty.open, 
+[class~="platform-linux"] #spref-output h2 strong.twisty.open
+{
+	background:url(chrome://sitepointreference/content/images/winnt/twistyOpen.png) no-repeat -1px 0;
+}
+[class~="platform-winnt"] #spref-output h2 strong.twisty.closed, 
+[class~="platform-linux"] #spref-output h2 strong.twisty.closed
+{
+	background:url(chrome://sitepointreference/content/images/winnt/twistyClosed.png) no-repeat -1px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* overall layout adjustments when space is tight */
+.panelNode-reference.narrow #spref-reference-links
+{
+	position:static;
+	width:auto;
+}
+
+.panelNode-reference.narrow #spref-output 
+{
+	margin-top:16em;
+	padding:0 0 10px 0;
+}
+
+.panelNode-reference.narrow #spref-output table
+{
+	width:92.6%;
+}
+
+.panelNode-reference.narrow #spref-searchbox
+{
+	position:absolute;
+	right:0;
+}
+
+
+

@@ -1,0 +1,208 @@
+/* SPREF1.6 :: CodeBurner for Firebug v1.6
+//******************************************************************************
+// Copyright (c) 2010 SitePoint Pty Ltd. -- http://www.sitepoint.com/
+// Written by brothercake -- http://www.brothercake.com/
+//******************************************************************************
+// This contains rules for the side-panel containing our code examples
+//*****************************************************************************/
+
+
+
+
+/* global reset inside our panel */
+.panelNode-spref-example-html *, 
+.panelNode-spref-example-stylesheet *,
+.panelNode-spref-example-reference *
+{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+
+/* panel document */
+.panelNode-spref-example-html, 
+.panelNode-spref-example-stylesheet,
+.panelNode-spref-example-reference
+{
+	background:url(chrome://sitepointreference/content/images/panel-background.png) #fff;
+}
+
+
+
+/* main example container div */
+#spref-example
+{
+	padding:10px 15px 10px 11px;
+	min-width:260px;
+}
+
+
+/* no results messages */
+p.noresults
+{
+	clear:both;
+	clear:both;
+	font:normal normal normal 1.1em arial,sans-serif;
+	border-bottom:1px solid #666;
+	margin:0;
+	padding:5px;
+	color:#446;
+	background:#eee;
+}
+
+
+
+
+/* header, containing main heading and type caption */
+#spref-example .header
+{
+	float:left;
+	width:100%;
+	border-bottom:1px solid #666;
+	padding:0 0 2px 0;
+	margin:0 0 5px 0;
+	position:relative;
+}
+
+
+/* main node heading */
+#spref-example .header h1
+{
+	font:normal normal normal 2em monospace;
+	border:none;
+	float:left;
+	width:65%;
+}
+
+#spref-example h1.elements, #spref-example h1.elements a
+{
+	color:#000090;
+}
+
+#spref-example h1.attributes, #spref-example h1.attributes a
+{
+	color:#006000;
+}
+
+#spref-example h1.properties, #spref-example h1.properties a
+{
+	color:#900000;
+}
+
+#spref-example h1.selectors, #spref-example h1.selectors a
+{
+	color:#007070;
+}
+
+#spref-example h1.pseudo-node, #spref-example h1.pseudo-node a
+{
+	color:#600090;
+}
+
+#spref-example h1.atrules, #spref-example h1.atrules a
+{
+	color:#707000;
+}
+
+#spref-example h1.selectors:not(.pseudo-node), 
+#spref-example h1.selectors:not(.pseudo-node) a,
+#spref-example h1.atrules.mediaquery, 
+#spref-example h1.atrules.mediaquery a
+{
+	font-family:"lucida grande",verdana,sans-serif;
+}
+#spref-example h1.selectors:not(.pseudo-node), 
+#spref-example h1.atrules.mediaquery
+{
+	font-size:1.6em;
+}
+
+
+/* type caption */
+#spref-example .header .caption
+{
+	float:right;
+	color:#779;
+	font:normal normal normal 0.9em verdana, sans-serif;
+	position:absolute;
+	bottom:5px;
+	right:0;
+	text-transform:capitalize;
+}
+
+
+/* more links */
+#spref-example #morelinks
+{
+	padding:10px 0 0 0;
+	text-align:right;
+}
+
+#morelinks a:link
+{
+	color:#00f;
+	text-decoration:underline;
+}
+
+#morelinks a:hover,
+#morelinks a:focus
+{
+	text-decoration:underline;
+	color:#f60;
+}
+
+#morelinks a:visited
+{
+	color:#909;
+	text-decoration:underline;
+}
+
+
+
+
+
+
+/* summary description */
+#spref-example p.summary
+{
+	clear:both;
+	margin:0 0 20px 0;
+	color:#333;
+	font:italic normal normal 1.05em "trebuchet ms", sans-serif;
+}
+
+
+
+
+/* code example containers */
+#spref-example #example
+{
+	border:1px solid #999;
+	border-color:#bbb #888 #888 #bbb;
+	background:#eee;
+	-moz-box-shadow:1px 1px 2px rgba(64,64,64,0.4);
+}
+
+#spref-example #example p.nocode
+{
+	color:#779;
+	padding:2px 4px;
+}
+
+#spref-example #example iframe
+{
+	line-height:0;
+	width:100%;
+	border:none;
+	height:0;
+	background:#eee;
+	overflow:hidden;
+	overflow-x:auto;
+	overflow-y:auto;
+}
+
+
+
+
+

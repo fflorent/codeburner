@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>	<title>Code examples for CSS atrules</title>	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<meta name="description" content="This page contains code examples for CSS atrules, indexed by @name" />	<meta name="generated" content="20090807" />	<meta name="edited" content="20101029" />	<meta name="library-version" content="2.0" />	<meta name="copyright" content="Copyright (c) 2010 SitePoint Pty Ltd." />	<link rel="license" href="http://tools.sitepoint.com/codeburner" />	<link rel="source" href="http://reference.sitepoint.com/css" />	<link rel="stylesheet" type="text/css" href="chrome://sitepointreference/content/code.css" />	<script type="text/javascript" src="chrome://sitepointreference/content/code.js"></script></head><body class="css atrules"><div id="cdb-eg-atrules-at-charset"><dl><dt>This example indicates that the style
+    sheet will use the ISO-8859-15 character encoding:</dt><dd><pre class="code">@charset "ISO-8859-15";</pre></dd></dl></div><div id="cdb-eg-atrules-at-fontface"><dl><dt>This at-rule declares the font family
+    called Example Font, which is used in the statement that
+    follows:</dt><dd><pre class="code">@font-face {
+  font-family: "Example Font";
+  src: url("http://www.example.com/fonts/example");
+}
+h1 {
+  font-family: "Example Font", sans-serif;
+}</pre></dd></dl></div><div id="cdb-eg-atrules-at-import"><dl><dt>Here are examples of the most common
+    usage forms:</dt><dd><pre class="code">@import url("/css/main.css");
+@import "local.css";</pre></dd></dl></div><div id="cdb-eg-atrules-at-media"><dl><dt>This rule set will be applied only
+    when the document is printed or viewed in print preview
+    mode:</dt><dd><pre class="code">@media print {
+  body {
+    padding: 1in;
+    border: 0.5pt solid #666;
+  }
+}</pre></dd></dl></div><div id="cdb-eg-atrules-mediaqueries"><dl><dt>Here are some examples of media queries in action:</dt><dd><pre class="code">@import url(/style.css) all and (color);
+
+@media all and (min-width:800px) {
+  ⋮ one or more rule sets…
+}</pre></dd></dl></div><div id="cdb-eg-atrules-at-namespace"><dl><dt>The first example below declares a
+    default namespace; the second declares that the prefix
+     svg can be used to refer to elements from the SVG
+    namespace,  "http://www.w3.org/2000/svg":</dt><dd><pre class="code">@namespace "http://www.w3.org/1999/xhtml";
+@namespace svg "http://www.w3.org/2000/svg";</pre></dd></dl></div><div id="cdb-eg-atrules-at-page"><dl><dt>This example sets default page
+    margins:</dt><dd><pre class="code">@page {
+  margin: 1in 1.5in;
+}</pre></dd></dl></div></body></html>

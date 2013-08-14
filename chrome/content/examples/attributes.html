@@ -1,0 +1,2254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>		<title>Code examples for HTML attributes</title>	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<meta name="description" content="This page contains code examples for HTML attributes, indexed by owner element then attribute" />	<meta name="generated" content="20090215" />	<meta name="edited" content="20101029" />	<meta name="library-version" content="2.0" />	<meta name="copyright" content="Copyright (c) 2010 SitePoint Pty Ltd." />	<link rel="license" href="http://tools.sitepoint.com/codeburner/" />	<link rel="source" href="http://reference.sitepoint.com/html" />	<link rel="stylesheet" type="text/css" href="chrome://sitepointreference/content/code.css" />	<script type="text/javascript" src="chrome://sitepointreference/content/code.js"></script>	</head><body class="html attributes"><div id="cdb-eg-attributes-a-accesskey"><dl><dt>In this example, an
+     <code>accesskey</code> has been defined on the link to the cake
+    sales page:</dt><dd><pre class="code">&lt;a href="cakes.html" <em>accesskey="c"</em>&gt;lovely range of cakes&lt;/a&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-charset"><dl><dt>More cakes! Here, a
+     <code>charset</code> is defined, as they’re special Japanese
+    cakes:</dt><dd><pre class="code">&lt;a href="cakes-ja.html" <em>charset="euc-jp"</em>&gt;lovely range of
+    Japanese cakes (note: this link will take you to a page in Japanese
+    language)&lt;/a&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-coords"><dl><dt>This
+     <code>coords</code> attribute defines the top-left and
+    bottom-right coordinates for a rectangular shape:</dt><dd><pre class="code">&lt;a href="the-hero.html" shape="rect" <em>coords="132,117,270,185"</em>&gt;
+    Monday's mustache - 'The Hero'&lt;/a&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-href"><dl><dt>The example below shows a link
+    between two documents in the same directory on the server’s file
+    system:</dt><dd><pre class="code">&lt;a href="cakes.html"&gt;lovely range of cakes&lt;/a&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-hreflang"><dl><dt>A
+     <code>hreflang</code> is defined in this link to the cakes list
+    page, as they’re special Japanese cakes:</dt><dd><pre class="code">&lt;a href="cakes-ja.html" charset="euc-jp" <em>hreflang="ja"</em>&gt;lovely range
+    of Japanese cakes (note: this link will take you to a page in
+    Japanese language)&lt;/a&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-name"><dl><dt>The following example
+    shows a link with the  <code>name</code> attribute of
+     mmm-cake:</dt><dd><pre class="code">&lt;a href="cakes-ja.html" <em>name="mmm-cake"</em>&gt;lovely range
+    of Japanese cakes (note: this link will take you to
+    a page in Japanese language)&lt;/a&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-rel"><dl><dt>The following snippet shows a link
+    to a friend’s web site, and uses the  <code>rel</code> attribute
+    to classify the linked page’s relationship to the page on which the link
+    occurs. This example shows an attribute defined in the Microformats XFN pattern:</dt><dd><pre class="code">&lt;p&gt;I went over to &lt;a href="http://www.djformat.com/"
+    <em>rel="friend"</em>&gt;Matt&lt;/a&gt;'s house. He was spinning some weird Cuban
+    music for a mix he was putting together.&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-rev"><dl><dt>In the following example, the link
+    to the cakes list is defined so that the
+     rel(ationship) shows that the linked document is a
+    page that’s classified as a  product-line. Meanwhile,
+    the  <code>rev</code> attribute indicates that the linked page
+    would treat the referencing page as an index of menus (or
+     menu-index):</dt><dd><pre class="code">&lt;p&gt;You can try our &lt;a href="cakes.html" <em>rel="product-line"</em>
+    <em>rev="menu-index"</em>&gt;lovely range of cakes&lt;/a&gt;.&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-shape"><dl><dt>Here, the
+     <code>shape</code> attribute for a hyperlink is set to
+     poly (for polygon):</dt><dd><pre class="code">&lt;a href="theweasel.html" <em>shape="poly"</em>
+    coords="136,238,137,301,3,306,3,242"&gt;Thursday's mustache -
+    'The Weasel'&lt;/a&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-tabindex"><dl><dt>The  <code>tabindex</code>
+    is set to  3 for the link below:</dt><dd><pre class="code">&lt;p&gt;You can try our &lt;a href="cakes.html" <em>tabindex="3"</em>&gt;lovely
+     range of cakes&lt;/a&gt;.&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-a-target"><dl><dt>Here, the
+     <code>target</code> attribute for the  a
+    element is set to  _top: </dt><dd><pre class="code">&lt;p&gt;You can try our &lt;a href="cakes.html" <em>target="_top"</em>&gt;lovely range
+    of cakes&lt;/a&gt;.&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-abbr-title"><dl><dt>The  <code>title</code>
+    attribute is applied to an abbreviation below:</dt><dd><pre class="code">&lt;p&gt;The page had the phrase &lt;abbr <em>title="Please Turn Over"</em>&gt;PTO&lt;/abbr&gt;
+    written on it. If only I knew what PTO meant. So I turned the page
+    to see if that revealed the answer.&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-acronym-title"><dl><dt>The  <code>title</code>
+    attribute is applied to an acronym below:</dt><dd><pre class="code">&lt;p&gt;He marvelled at how fluid the &lt;acronym <em>title="Graphical User
+    Interface"</em>&gt;GUI&lt;/acronym&gt; was. It truly was a gooey GUI.&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-applet-align"><dl><dt>The  <code>align</code> for
+	this  applet is set to
+	 right:</dt><dd><pre class="code">&lt;applet code="ticker.class"<em>align="right"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-alt"><dl><dt>The  <code>alt</code>
+	attribute shows that this is a  stock ticker
+	applet:</dt><dd><pre class="code">&lt;applet code="ticker.class" <em>alt="Stock ticker"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-archive"><dl><dt>The  <code>archive</code>
+	attribute:</dt><dd><pre class="code">&lt;applet code="ticker.class" <em>archive="ticker.jar"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-code"><dl><dt>The  <code>code</code>
+	attribute defines the filename as
+	 ticker.class:</dt><dd><pre class="code">&lt;applet <em>code="ticker.class"</em>
+codebase="http://java-apps-r-us.com/classes/"&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-codebase"><dl><dt>The  <code>codebase</code> defining the
+	base URL:</dt><dd><pre class="code">&lt;applet code="ticker.class"
+<em>codebase="http://java-apps-r-us.com/classes/"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-height"><dl><dt>The  <code>height</code>
+	attribute set to  100:</dt><dd><pre class="code">&lt;applet code="ticker.class" <em>height="100"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-hspace"><dl><dt>The  <code>hspace</code>
+	attribute set to  30 pixels around a left-aligned
+	 applet:</dt><dd><pre class="code">&lt;applet code="ticker.class" align="left" <em>hspace="30"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;applet code="ticker.class" <em>name="stockticker"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-vspace"><dl><dt>The  <code>vspace</code>
+	attribute set to  30 pixels around a left-aligned
+	 applet:</dt><dd><pre class="code">&lt;applet code="ticker.class" align="left" <em>vspace="30"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-applet-width"><dl><dt>The  <code>width</code>
+	attribute set to  200:</dt><dd><pre class="code">&lt;applet code="ticker.class" height="100" <em>width="200"</em>&gt;
+&lt;/applet&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-area-accesskey"><dl><dt>Here, the first
+     area has an  <code>accesskey</code> of
+     b defined:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" coords="35,4,205,108"
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      alt="Australia's Big Things (on Wikipedia)" <em>accesskey="b"</em>/&gt;
+    ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    border="0" usemap="#bigthings"/&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-area-alt"><dl><dt>This
+     <code>alt</code> attribute explains the link destination—a
+    Wikipedia entry:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" coords="35,4,205,108"
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      <em>alt="Australia's Big Things (on Wikipedia)"</em>/&gt;
+  ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" usemap="#bigthings"/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-area-coords"><dl><dt>This  <code>coords</code>
+    attribute defines the top-left and bottom-right coordinates for a
+    rectangular shape:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" <em>coords="35,4,205,108"</em>
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      alt="Australia's Big Things (on Wikipedia)"/&gt;
+  ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" usemap="#bigthings"/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-area-href"><dl><dt>The  <code>href</code>
+    below defines a link to a page on Wikipedia:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" coords="35,4,205,108"
+      <em>href="http://en.wikipedia.org/wiki/Australia's_Big_Things"</em>
+      alt="Australia's Big Things (on Wikipedia)"/&gt;
+  ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" usemap="#bigthings"/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-area-nohref"><dl><dt>The  <code>nohref</code>
+    attribute is used here in place of an
+     href:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" coords="35,4,205,108"
+      <em>nohref="nohref"</em>
+      alt="The giant prawn, another of Australia's Big Things"/&gt;
+  ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" usemap="#bigthings"/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-area-shape"><dl><dt>This  <code>shape</code>
+    attribute is set to  rect, for
+    rectangle:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area <em>shape="rect"</em> coords="35,4,205,108"
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      alt="Australia's Big Things (on Wikipedia)"/&gt;
+  ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" usemap="#bigthings"/&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-area-tabindex"><dl><dt>The  <code>tabindex</code>
+    is set to  3 for the link in the
+     area below:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" coords="35,4,205,108" <em>tabindex="3"</em>
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      alt="Australia's Big Things (on Wikipedia)"/&gt;
+  ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" usemap="#bigthings"/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-area-target"><dl><dt>The
+     <code>target</code> attribute for this  area
+    is set to  _top: </dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" coords="35,4,205,108" <em>target="_top"</em>
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      alt="Australia's Big Things (on Wikipedia)"/&gt;
+  ⋮
+&lt;/map&gt;
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" usemap="#bigthings"/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-base-href"><dl><dt>The base URL is defined
+    here as a domain:</dt><dd><pre class="code">&lt;base <em>href="http://lloydi.com"</em>/&gt;
+⋮
+&lt;p&gt;
+  I've published my &lt;a href="/travel-writing/"&gt;holiday diaries&lt;/a&gt;,
+  including the &lt;a href="/travel-writing/prague/2006/day2.html"&gt;
+  crazy bone church at Kutna Hora&lt;/a&gt;.
+&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-base-target"><dl><dt>Here, the base
+     <code>target</code> is defined as a frame named
+     right:</dt><dd><pre class="code">&lt;base href="http://lloydi.com" <em>target="right"</em>/&gt;
+⋮
+&lt;p&gt;
+  I've published my &lt;a href="/travel-writing/"&gt;holiday diaries&lt;/a&gt;,
+  including the &lt;a href="/travel-writing/prague/2006/day2.html"&gt;
+  crazy bone church at Kutna Hora&lt;/a&gt;.
+&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-basefont-color"><dl><dt>Here’s an example of the <code>color</code> attribute in action:</dt><dd><pre class="code">&lt;basefont size="2" <em>color="purple"</em>&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-basefont-face"><dl><dt>Here’s an example of the <code>face</code> attribute in action:</dt><dd><pre class="code">&lt;basefont size="2" <em>face="Courier New, Courier, monospace"</em>&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-basefont-size"><dl><dt>The  <code>size</code>
+    attribute is shown below:</dt><dd><pre class="code">&lt;head&gt;
+ ⋮
+ &lt;basefont <em>size="7"</em>/&gt;
+&lt;/head&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-bdo-dir"><dl><dt>Here, the direction is set to
+    right-to-left:</dt><dd><pre class="code">&lt;p&gt;The sequence was reversed as &lt;bdo <em>dir="rtl"</em>&gt;1-2-3-4-5&lt;/bdo&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-bgsound-balance"><dl><dt>Audio set to left speaker only:
+    </dt><dd><pre class="code">&lt;bgsound src="50_005a08.wav" <em>balance="-10000"</em>/&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-bgsound-loop"><dl><dt>Audio set to play three times:
+    </dt><dd><pre class="code">&lt;bgsound src="50_005a08.wav" <em>loop="3"</em>/&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-bgsound-src"><dl><dt>Here’s an example of the <code>src</code> attribute in action:</dt><dd><pre class="code">&lt;bgsound <em>src="50_005a08.wav"</em>/&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-bgsound-volume"><dl><dt>Here’s an example of the <code>volume</code> attribute in action:</dt><dd><pre class="code">&lt;bgsound src="50_005a08.wav" <em>volume="-4000"</em>/&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-blockquote-cite"><dl><dt>This example shows an attribution,
+    created using the  <code>cite</code> attribute:</dt><dd><pre class="code">&lt;blockquote <em>cite="http://www.brucelawson.co.uk/index.php/2005/stupid-stock-photography/"</em>&gt;
+  &lt;p&gt;It's missing alt text, so it’s difficult to determine what it's
+      supposed to mean. Presumably "oooh, there's been a global
+      ecological catastrophe and we've got the last four leaves in the
+      world and we've patented the DNA". Or they're rubbing ganja
+      leaves together to extract the resin, but are too stupid to
+      recognise Marijuana so are trying it with willow or silver
+      birch.&lt;/p&gt;
+&lt;/blockquote&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-body-alink"><dl><dt>This markup sets the
+    active links to green:</dt><dd><pre class="code">&lt;body <em>alink="green"</em>&gt;
+  ⋮
+&lt;/body&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-body-background"><dl><dt>This code applies a sandy theme to
+    the page:</dt><dd><pre class="code">&lt;body <em>background="sandy.jpg"</em>&gt;
+  ⋮
+&lt;/body&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-body-bgcolor"><dl><dt>This markup sets the
+     <code>bgcolor</code> for this document to
+     yellow:</dt><dd><pre class="code">&lt;body <em>bgcolor="yellow"</em>&gt;
+  ⋮
+&lt;/body&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-body-link"><dl><dt>This markup sets unvisited links to
+     navy:</dt><dd><pre class="code">&lt;body <em>link="navy"</em>&gt;
+  ⋮
+&lt;/body&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-body-text"><dl><dt>The <code>text</code> color is set
+    to lime, contrasting with the black  bgcolor:</dt><dd><pre class="code">&lt;body bgcolor="black" <em>text="lime"</em>&gt;
+  &lt;p&gt;This, right here, is retro style.&lt;/p&gt;
+&lt;/body&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-body-vlink"><dl><dt>This code sets visited links to
+     gray:</dt><dd><pre class="code">&lt;body <em>vlink="gray"</em>&gt;
+  ⋮
+&lt;/body&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-br-clear"><dl><dt>This example shows a
+     br with which a  <code>clear</code> attribute
+    is used to take content below a right-aligned image:</dt><dd><pre class="code">&lt;p&gt;&lt;img src="pool.jpg" alt="sitting by the pool" align="right"/&gt;
+    The rest of the day was a lazy one, partly spent by the complex
+    pool, partly inside watching British TV, but we couldn't be doing
+    this for the rest of the holiday. Already we were missing having
+    the car!
+<em>  &lt;br clear="all"/&gt;</em>
+    I decided to check out what the weather would be doing for the next
+    few days, as that would help us make any decisions about future
+    excursions.
+&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-button-accesskey"><dl><dt>This code assigns the
+     <code>accesskey</code> for this  button to the
+     s key:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;button <em>accesskey="s"</em> title="Accesskey = s"&gt;I am
+      &lt;em&gt;really&lt;/em&gt; sure I want to proceed&lt;/button&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-button-disabled"><dl><dt>Here’s an example of the <code>disabled</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;button accesskey="s" <em>disabled="disabled"</em>&gt;I am
+      &lt;em&gt;really&lt;/em&gt; sure I want to proceed [accesskey = s]&lt;/button&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-button-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;button <em>name="btnProceed"</em>&gt;I am
+      &lt;em&gt;really&lt;/em&gt; sure I want to proceed&lt;/button&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-button-tabindex"><dl><dt>This code sets the
+     <code>tabindex</code> for the  button
+    control:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;button <em>tabindex="4"</em>&gt;I am
+      &lt;em&gt;really&lt;/em&gt; sure I want to proceed&lt;/button&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-button-type"><dl><dt>The  <code>type</code> is
+    set to  reset for this
+     button:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;button <em>type="reset"</em>&gt;
+    &lt;strong&gt;Clear all data&lt;/strong&gt; in this form
+  &lt;/button&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-button-value"><dl><dt>This markup defines different
+     <code>value</code> attributes for two submit
+     buttons:</dt><dd><pre class="code">&lt;form&gt;
+⋮
+  &lt;button accesskey="b" name="cmdsubmitter1"
+      type="submit" <em>value="blue"</em>&gt;
+      Take the &lt;strong style="color:blue;"&gt;blue&lt;/strong&gt; pill
+  &lt;/button&gt;
+  &lt;button accesskey="r" name="cmdsubmitter2"
+      type="submit" <em>value="red"</em>&gt;
+      Take the &lt;strong style="color:red;"&gt;red&lt;/strong&gt; pill
+  &lt;/button&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-caption-align"><dl><dt>The  <code>align</code> for
+    this  caption is set to
+     right:</dt><dd><pre class="code">&lt;table&gt;
+  &lt;caption <em>align="right"</em>&gt;Interest Rates&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-col-align"><dl><dt>This example shows text alignments
+    set on  col elements:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  <em>&lt;col align="left"/&gt;
+  &lt;col align="center"/&gt;
+  &lt;col align="right"/&gt;
+  &lt;col/&gt;</em>
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name sfdg sfg sdfg  sdfg sdfg sfsgsdf gs&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-col-char"><dl><dt>This column data is set to align to
+    the  : character:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;col align="char" <em>char=":"</em>/&gt;
+  &lt;col align="char" <em>char=":"</em>/&gt;
+  &lt;col align="char" <em>char=":"</em>/&gt;
+  &lt;col align="char" <em>char=":"</em>/&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name sfdg sfg sdfg  sdfg sdfg sfsgsdf gs&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-col-charoff"><dl><dt>In this example, the
+     <code>charoff</code> is set to align four characters to the
+    right of  : (in columns 1, 2, 4) and two characters to
+    the left of  . (in column 3):</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;col align="char" char=":" <em>charoff="4"</em>/&gt;
+  &lt;col align="char" char=":" <em>charoff="4"</em>/&gt;
+  &lt;col align="char" char="." <em>charoff="-2"</em>/&gt;
+  &lt;col align="char" char=":" <em>charoff="4"</em>/&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-col-span"><dl><dt>Here, the
+     <code>span</code> is used to group the first two columns
+    separately from the second two columns, and each group is given a
+    different  class for styling
+    purposes:</dt><dd><pre class="code">&lt;table border="1" cellpadding="5"&gt;
+  &lt;col class="st1" <em>span="2"</em>/&gt;
+  &lt;col class="st2" <em>span="2"</em>/&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-col-valign"><dl><dt>Here, the
+     <code>valign</code> is set to  bottom for
+    cells that appear in the first column of the table:</dt><dd><pre class="code">&lt;table border="1" cellpadding="5"&gt;
+  &lt;col <em>valign="bottom"</em>/&gt;
+  &lt;col/&gt;
+  &lt;col/&gt;
+  &lt;col/&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-col-width"><dl><dt>The
+     <code>width</code> attribute for each column is set to a larger
+    value than that of the column to its left:</dt><dd><pre class="code">&lt;table border="1" cellpadding="5"&gt;
+  &lt;col<em> width="100"</em>/&gt;
+  &lt;col <em>width="150"</em>/&gt;
+  &lt;col <em>width="200"</em>/&gt;
+  &lt;col <em>width="250"</em>/&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-colgroup-align"><dl><dt>This example shows the setting of
+    alignment in  colgroup elements to
+     center:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;colgroup <em>align="center"</em>&gt;
+    &lt;col/&gt;
+    &lt;col/&gt;
+    &lt;col/&gt;
+    &lt;col/&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-colgroup-char"><dl><dt>The column data below is set to
+    align to the  : and  % characters
+    in different  colgroups:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;colgroup align="char" <em>char=":"</em>&gt;
+    &lt;col/&gt;
+    &lt;col/&gt;
+  &lt;/colgroup&gt;
+  &lt;colgroup align="char" <em>char="%"</em>&gt;
+    &lt;col/&gt;
+    &lt;col/&gt;
+  &lt;/colgroup&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-colgroup-charoff"><dl><dt>In the example the
+     <code>charoff</code> is set to
+     2:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;colgroup align="char" char=":" <em>charoff="2"</em>&gt;
+    &lt;col/&gt;
+    &lt;col/&gt;
+  &lt;/colgroup&gt;
+  &lt;colgroup align="char" char="%" <em>charoff="2"</em>&gt;
+    &lt;col/&gt;
+    &lt;col/&gt;
+  &lt;/colgroup&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-colgroup-span"><dl><dt>Here, two groups of columns are
+    defined using the  <code>span</code> attribute:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;colgroup width="60%" <em>span="2"</em>/&gt;&lt;/colgroup&gt;
+  &lt;colgroup width="40%" <em>span="2"</em>/&gt;&lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-colgroup-valign"><dl><dt>Here, the
+     <code>valign</code> is set to  bottom for
+    cells that appear in the first two columns of the table:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;colgroup width="60%" span="2" <em>valign="bottom"</em>/&gt;&lt;/colgroup&gt;
+  &lt;colgroup width="40%" span="2"/&gt;&lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-colgroup-width"><dl><dt>Here, the
+     <code>width</code> attribute for two column groups is split on a
+    percentage basis—the first column group receives 60% of the available
+    width, while the second receives 40% of the available
+    width:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;colgroup <em>width="60%"</em> span="2"/&gt;&lt;/colgroup&gt;
+  &lt;colgroup <em>width="40%"</em> span="2"/&gt;&lt;/colgroup&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-class"><dl><dt>The  div element in this example has two classes assigned to
+    it, which identify it both as an  aside and as
+     salescopy:</dt><dd><pre class="code">&lt;div <em>class="aside salescopy"</em>&gt;This is a sidebar.&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-dir"><dl><dt>The following example
+    indicates that the direction of the Hebrew text is right to
+    left:</dt><dd><pre class="code">&lt;p&gt;The bulk of the content is in English and flows left to right,
+until this phrase in Hebrew makes an appearance,
+<em>&lt;span lang="he" dir="rtl"&gt; שָׁלוֹם&lt;/span&gt;</em> (meaning hello), which
+needs to be set to read right-to-left.&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-id"><dl><dt>The  span element in this example
+    may be referred to by the unique identifier
+     thisspan:</dt><dd><pre class="code">&lt;span <em>id="thisspan"</em>&gt;A uniquely identifiable element.&lt;/span&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-lang"><dl><dt>This markup specifies
+    the language of a page as English:</dt><dd><pre class="code">&lt;html <em>lang="en"</em>&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-style"><dl><dt>If you want to set a
+    paragraph to display in blue and bold, you could use the following
+    code:</dt><dd><pre class="code">&lt;p <em>style="color:blue;font-weight:bold;"</em>&gt;This is a very short
+    paragraph. No Booker Prize for me.&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-title"><dl><dt>The
+     abbr and  acronym elements use the
+     <code>title</code> attribute to provide the full wording for the
+    abbreviation (although it’s not a required attribute for these
+    elements):</dt><dd><pre class="code">&lt;div&gt;The <em>&lt;abbr title="Americans with Disabilities Act"&gt;ADA&lt;/abbr&gt;</em>
+    is there for your protection.&lt;/div&gt;
+&lt;div&gt;This pub is rated highly by <em>&lt;acronym title="Campaign for Real
+    Ale"&gt;CAMRA&lt;/acronym&gt;</em>.&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-xml-lang"><dl><dt>This example specifies
+    the language of an XHTML Strict document as English:</dt><dd><pre class="code">&lt;html xmlns="http://www.w3.org/1999/xhtml" <em>xml:lang="en"</em> lang="en"&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-del-cite"><dl><dt>The  <code>cite</code>
+    attribute is used in conjunction with both the  del and
+     ins elements below:</dt><dd><pre class="code">&lt;p&gt;Bernie enjoyed nothing more than a &lt;del
+    <em>cite="http://berniesworld.com/drag.html"</em>
+    datetime="2007-11-05T23:31:05Z"&gt;night out on the town at his
+    favorite drag queen show&lt;/del&gt; &lt;ins
+    <em>cite="http://berniesworld.com/drag.html"</em>
+    datetime="2007-11-05T23:33:32Z"&gt;quiet night in with a warm cup of
+    cocoa&lt;/ins&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-del-datetime"><dl><dt>The  <code>datetime</code>
+    attribute is used below in both the  del and
+     ins elements:</dt><dd><pre class="code">&lt;p&gt;Bernie enjoyed nothing more than a &lt;del
+    cite="http://berniesworld.com/drag.html"
+    <em>datetime="2007-11-05T23:31:05Z"</em>&gt;night out on the town at his
+    favorite drag queen show&lt;/del&gt; &lt;ins
+    cite="http://berniesworld.com/drag.html"
+    <em>datetime="2007-11-05T23:33:32Z"</em>&gt;quiet night in with a warm cup of
+    cocoa&lt;/ins&gt;
+&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-dir-compact"><dl><dt>This example shows
+     <code>compact</code> applied to the plants directory list shown
+    earlier:</dt><dd><pre class="code">&lt;dir <em>compact="compact"</em>&gt;
+&lt;li&gt;shrubs&lt;/li&gt;
+&lt;li&gt;conifers&lt;/li&gt;
+&lt;li&gt;hedges&lt;/li&gt;
+&lt;/dir&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-div-align"><dl><dt>The  div below,
+    identified as a  sidebar, will <code>align</code> the content
+    inside the  div to the  right (but
+    as this  div is identified with the
+     id attribute, CSS could—and should—be used to set
+    the alignment):</dt><dd><pre class="code">&lt;div id="sidebar" <em>align="right"</em>&gt;
+⋮
+&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-dl-compact"><dl><dt>The  <code>compact</code>
+    attribute is applied to a simple definition list in the example
+    below:</dt><dd><pre class="code">&lt;dl <em>compact="compact"</em>&gt;
+  &lt;dt&gt;Spam&lt;/dt&gt;
+  &lt;dd&gt;unsolicited email sent in the hope of increasing sales of some
+      product, or simply for the purposes of annoying people&lt;/dd&gt;
+  &lt;dt&gt;Spammer&lt;/dt&gt;
+  &lt;dd&gt;someone who sends out spam email and therefore deserves to
+      develop a nasty incurable disease of some kind&lt;/dd&gt;
+  &lt;dt&gt;Spam Filter&lt;/dt&gt;
+  &lt;dd&gt;a tool used in email to 'filter out' likely spam messages,
+      usually placing them in a dedicated junk messages folder
+      or similar&lt;/dd&gt;
+&lt;/dl&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-embed-align"><dl><dt>The  <code>align</code> for
+    this  embed is set to
+     right:</dt><dd><pre class="code">&lt;embed src="flash-test.swf" <em>align="left"</em>&gt;&lt;/embed&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-embed-alt"><dl><dt>The  <code>alt</code>
+	attribute clearly explains what the image in this  embed
+	element contains:</dt><dd><pre class="code">&lt;embed src="giant-grasshopper.jpg" width="300" height="100"
+<em>alt="A giant grasshopper on a roof-top"</em>&gt;&lt;/embed&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-embed-border"><dl><dt>The  <code>border</code>
+	attribute on an image set to  20:</dt><dd><pre class="code">&lt;embed src="giant-grasshopper.jpg" <em>border="20"</em>
+height="206" width="300"&gt;&lt;/embed&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-embed-height"><dl><dt>The  <code>height</code>
+	attribute set to  100:</dt><dd><pre class="code">&lt;embed src="giant-grasshopper.jpg" width="300" <em>height="100"</em>&gt;&lt;/embed&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-embed-hidden"><dl><dt>The  <code>hidden</code>
+	attribute set to  true to hide the transport control
+	on some audio:</dt><dd><pre class="code">&lt;embed src="Crash.wav" <em>hidden="true"</em>&gt;&lt;/embed&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-embed-hspace"><dl><dt>The  <code>hspace</code>
+    attribute set to  20 pixels around a left-aligned
+     embed object:</dt><dd><pre class="code">&lt;embed src="giant-grasshopper.jpg" <em>hspace="20"</em> align="left"&gt;&lt;/embed&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-embed-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;embed src="giant-grasshopper.jpg" <em>name="ghopper"</em>&gt;&lt;/embed&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-embed-src"><dl><dt>The  <code>src</code>
+	attribute for this object refers to a .jpg file:</dt><dd><pre class="code">&lt;embed <em>src="giant-grasshopper.jpg"</em> height="206" width="300"&gt;&lt;/embed&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-embed-type"><dl><dt>Here’s an example of the <code>type</code> attribute in action:</dt><dd><pre class="code">&lt;embed src="conference-report.mp4" <em>type="video/mp4"</em>&gt;&lt;/embed&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-embed-vspace"><dl><dt>The  <code>vspace</code>
+    attribute set to  30 pixels around a left-aligned
+    image object:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" height="225" width="300" align="left"
+<em>vspace="30"</em>&gt;&lt;/object&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-embed-width"><dl><dt>The  <code>width</code>
+	attribute set to  200:</dt><dd><pre class="code">&lt;embed src="giant-grasshopper.jpg" <em>width="300"</em>
+height="100"&gt;&lt;/embed&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-all-onblur"><dl><dt>In this example, the
+     <code>onblur</code> event calls a function called
+     validate:</dt><dd><pre class="code">&lt;input type="text" title="Date format = DD/MM/YYYY"
+    onfocus="revealTitleHelp();" <em>onblur="validate(this.value);"</em>
+    name="dateofbirth"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onchange"><dl><dt>In this example, the
+     <code>onchange</code> event calls the
+     checkStockAvailability function:</dt><dd><pre class="code">&lt;input name="orderAmount" size="2" <em>onchange="checkStockAvailability();"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onclick"><dl><dt>Clicking anywhere on the
+     div below will call a function, defined elsewhere,
+    called  showStats():</dt><dd><pre class="code">&lt;div <em>onclick="showStats();"</em>&gt;Figures for February’s racing.&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-ondblclick"><dl><dt>Here, the
+     <code>ondblclick</code> event handler calls a function called
+     openFile:</dt><dd><pre class="code">ondblclick="openFile(this.id);" </pre></dd></dl></div><div id="cdb-eg-attributes-all-onfocus"><dl><dt>The
+     input below uses the  <code>onfocus</code>
+    attribute to trigger a piece of JavaScript. This script performs a little
+    magic with the content found in the  title attribute
+    when the user tabs to that particular form input, or places the cursor
+    inside the text field:</dt><dd><pre class="code">&lt;input type="text" title="Date format = DD/MM/YYYY"
+    <em>onfocus="revealTitleHelp();"</em> name="dateofbirth"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onkeydown"><dl><dt>Here’s an example of the <code>onkeydown</code> attribute in action:</dt><dd><pre class="code">&lt;body <em>onkeydown="increasePower();"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onkeypress"><dl><dt>In the example below, the
+     <code>onkeypress</code> attribute triggers a piece of JavaScript
+    that runs some kind of availability check, such as one to ensure that as
+    each letter is typed, the user is provided with feedback.</dt><dd><pre class="code">&lt;input type="text" <em>onkeypress="checkAvailability();"</em>  name="domain_name"
+    id="domain_name"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onkeyup"><dl><dt>Here’s an example of the <code>onkeyup</code> attribute in action:</dt><dd><pre class="code">&lt;body onkeydown="increasePower();" <em>onkeyup="holdPowerLevel();"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onload"><dl><dt>When  <code>onload</code>
+    is used as an inline attribute, it’s most frequently applied to the
+     body element, as shown below:</dt><dd><pre class="code">&lt;body <em>onload="initialiseHoverEffects();"</em>&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onmousedown"><dl><dt>The event handler for the
+     <code>onmousedown</code> event calls the function
+     highlightThis:</dt><dd><pre class="code">&lt;div <em>onmousedown="highlightThis();"</em>&gt;Holiday dates for 2008&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onmousemove"><dl><dt>This example calls the
+     updatePosition function:</dt><dd><pre class="code">&lt;div onmousedown="grabItem();" <em>onmousemove="updatePosition();"</em>&gt;Notepad -
+    drag me around the screen, make notes as you go … &lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onmouseout"><dl><dt>The example below shows a simple
+    image swap technique, whereby moving the mouse away from the image causes
+    the original image to be reinstated:</dt><dd><pre class="code">&lt;div&gt;
+  &lt;img src="map.gif" alt="Hover to reveal the location on the map"
+      onmouseover="this.src='map_location_revealed.gif';"
+      <em>onmouseout="this.src='map.gif';"</em>/&gt;Figures for February’s racing.
+&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onmouseover"><dl><dt>The example below shows a simple
+    image swap technique, whereby mousing over the image causes the image to
+    change to one that reveals a location on a map:</dt><dd><pre class="code">&lt;div&gt;
+  &lt;img src="map.gif" alt="Hover to reveal the location on the map"
+      <em>onmouseover="this.src='map_location_revealed.gif';"</em>
+      onmouseout="this.src='map.gif';"/&gt;Figures for February’s racing.
+&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onmouseup"><dl><dt>The event handler for
+     <code>onmouseup</code> event calls the function
+     unHighlightThis:</dt><dd><pre class="code">&lt;div onmouseup="highlightThis();" <em>onmouseup="unHighlightThis();</em>"&gt;Holiday
+    dates for 2008&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onreset"><dl><dt>If the
+     form must have a Reset button, a
+    good use of the  <code>onreset</code> attribute would be to check
+    whether the user  really wanted to clear the form
+    details:</dt><dd><pre class="code">&lt;form name="frmPersonalDetails" action="/personal.php"
+    onsubmit="checkPersonalDetails();"
+    <em>onreset="checkIfReallyWantToReset();"</em>&gt; ⋮ &lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onselect"><dl><dt>This
+    attribute might be used when the users have submitted a  form and are presented with something that
+    they then need to copy in order to use—for example, some code to paste
+    into their web page. The form control ( input or
+     textarea) could use the  <code>onselect</code>
+    attribute to trigger some kind of JavaScript function that would
+    automatically copy the text and notify the user that it was saved to the
+    clipboard, ready for them to paste:</dt><dd><pre class="code">&lt;textarea rows="10" name="generatedCode"
+    <em>onselect="copyToClipBoard();"</em>&gt;Text content inside the
+    textarea&lt;/textarea&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onsubmit"><dl><dt>This attribute is used
+    almost exclusively for the purpose of running form validation scripts. In
+    such scenarios, the user fills in the form and clicks submit, at which
+    point the  <code>onsubmit</code> attribute triggers the form
+    validation routine, and the form is either submitted, or cancelled because
+    of an error of which the user is alerted: </dt><dd><pre class="code">&lt;form name="frmPersonalDetails" action="/personal.php"
+    <em>onsubmit="checkPersonalDetails();"</em>&gt; ⋮ &lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-all-onunload"><dl><dt>When used as an inline attribute,
+     <code>onunload</code> is most frequently applied to the
+     body element, as shown below:</dt><dd><pre class="code">&lt;body <em>onunload="sayGoodbye();"</em>&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-font-color"><dl><dt>Here’s an example of the <code>color</code> attribute in action:</dt><dd><pre class="code">&lt;p&gt;This is not the way to emphasise text on a page - &lt;font
+<em>color="#003399"</em>&gt;remember this!&lt;/font&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-font-face"><dl><dt>The example below may seem
+    contrived, but a few years back people really would liberally apply
+     font elements like this, changing the appearance all
+    over the place: </dt><dd><pre class="code">&lt;p&gt;This is how you get to make your <em>&lt;font face="Courier New,
+Courier, monospace"&gt;page look crazy&lt;/font&gt;</em>. You just keep <em>&lt;font
+face="Verdana, Arial, Helvetica, sans-serif"&gt;changing the font
+style&lt;/font&gt;</em> like a <em>&lt;font face="Geneva, Arial, Helvetica,
+sans-serif"&gt;madman&lt;/font&gt;</em>&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-font-size"><dl><dt>The first set of examples below show
+    the seven font sizes available (with the default font <code>size</code> alongside each
+    by way of comparison):</dt><dd><pre class="code">&lt;p&gt;Default font size &lt;font <em>size="1"</em>&gt;Font size 1&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;Default font size &lt;font <em>size="2"</em>&gt;Font size 2&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;Default font size &lt;font <em>size="3"</em>&gt;Font size 3&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;Default font size &lt;font <em>size="4"</em>&gt;Font size 4&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;Default font size &lt;font <em>size="5"</em>&gt;Font size 5&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;Default font size &lt;font <em>size="6"</em>&gt;Font size 6&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;Default font size &lt;font <em>size="7"</em>&gt;Font size 7&lt;/font&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-form-accept-charset"><dl><dt>In this form, we tell the server to
+    accept Windows-only character sets (which isn’t a brilliant idea, to be
+    honest):</dt><dd><pre class="code">&lt;form action="form-to-email.php" method="post"
+    <em>accept-charset="windows-1252"</em>&gt;
+  &lt;div&gt;
+    &lt;label for="txtname"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="txtname" id="txtname"/&gt;
+  &lt;/div&gt;
+  ⋮
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-form-action"><dl><dt>Here’s an example of the <code>action</code> attribute in action:</dt><dd><pre class="code">&lt;form <em>action="form-to-email.php"</em> method="post"
+    accept-charset="windows-1252"&gt;
+  &lt;div&gt;
+    &lt;label for="txtname"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="txtname" id="txtname"/&gt;
+  &lt;/div&gt;
+ ⋮
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-form-enctype"><dl><dt>Here’s an example of the <code>enctype</code> attribute in action:</dt><dd><pre class="code">&lt;form action="address.php" method="get" <em>enctype="text/plain"</em>&gt;
+  &lt;div&gt;
+    &lt;label for="txtname"&gt;Full Name:&lt;/label&gt;
+    &lt;input type="text" name="txtname" id="txtname"/&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="txtcontacttel"&gt;Contact Tel:&lt;/label&gt;
+    &lt;input type="text" name="txtcontacttel" id="txtcontacttel"/&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit" name="cmdSubmit" id="cmdSubmit"
+        value="Send personal details"/&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-form-method"><dl><dt>Here’s an example of the <code>method</code> attribute in action:</dt><dd><pre class="code">&lt;form action="address.php" <em>method="get"</em>&gt;
+  &lt;div&gt;
+    &lt;label for="txtname"&gt;Full Name:&lt;/label&gt;
+    &lt;input type="text" name="txtname" id="txtname"/&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="txtcontacttel"&gt;Contact Tel:&lt;/label&gt;
+    &lt;input type="text" name="txtcontacttel" id="txtcontacttel"/&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input type="submit" name="cmdSubmit" id="cmdSubmit"
+        value="Send personal details"/&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-form-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;form action="search.php" method="post"
+    target="searchresults" <em>name="frmSearch"</em>&gt;
+  &lt;label for="txtsearch"&gt;Search for&lt;/label&gt;
+  &lt;input type="text" name="txtsearch" id="txtsearch"/&gt;
+  &lt;input type="submit" name="cmdSubmit"
+      id="cmdSubmit" value="Search"/&gt;
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-form-target"><dl><dt>Here’s an example of the <code>target</code> attribute in action:</dt><dd><pre class="code">&lt;form action="search.php" method="post" <em>target="searchresults"</em>&gt;
+  &lt;label for="txtsearch"&gt;Search for&lt;/label&gt;
+  &lt;input type="text" name="txtsearch" id="txtsearch"/&gt;
+  &lt;input type="submit" name="cmdSubmit" id="cmdSubmit" value="Search"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frame-frameborder"><dl><dt>The border removed for both
+     frames:</dt><dd><pre class="code">&lt;frameset rows="100,*" &gt;
+ &lt;frame src="header.html" <em>frameborder="0"</em>/&gt;
+ &lt;frame src="home.html" <em>frameborder="0"</em>/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frame-longdesc"><dl><dt>The  <code>longdesc</code>
+    attribute refers to a .txt:</dt><dd><pre class="code">&lt;frameset rows="100,*" &gt;
+ &lt;frame src="header.html" frameborder="1"
+ name="nav" title="Navigation window"/&gt;
+ &lt;frame src="home.html" frameborder="0"
+ name="main" title="Main window" <em>longdesc="main-description.txt"</em>/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frame-marginheight"><dl><dt>The header frame has a small amount
+    of margin (top/bottom) applied, the main frame a little
+    more:</dt><dd><pre class="code">&lt;frameset rows="100,*" &gt;
+ &lt;frame src="header.html" frameborder="1" <em>marginheight="5"</em>/&gt;
+ &lt;frame src="home.html" frameborder="0" <em>marginheight="20"</em>/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frame-marginwidth"><dl><dt>The main  frame in
+    this  frameset has a 10 pixel margin applied to the
+    sides:</dt><dd><pre class="code">&lt;frameset rows="100,*" &gt;
+ &lt;frame src="header.html" frameborder="1"/&gt;
+ &lt;frame src="home.html" frameborder="0" <em>marginwidth="10"</em>/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frame-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;frameset rows="100,*"&gt;
+ &lt;frame src="header.html" frameborder="1"
+ <em>name="nav"</em> title="Navigation window"/&gt;
+ &lt;frame src="home.html" frameborder="0"
+ <em>name="main"</em> title="Main window" longdesc="main-description.txt"/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frame-noresize"><dl><dt>The header frame will not be resized
+    using this markup:</dt><dd><pre class="code">&lt;frameset rows="100,*" &gt;
+ &lt;frame src="header.html" frameborder="1" <em>noresize="noresize"</em>/&gt;
+ &lt;frame src="home.html" frameborder="0"/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frame-scrolling"><dl><dt>The header frame will not cause
+    scroll bars, while the main frame will force scroll bars to
+    appear:</dt><dd><pre class="code">&lt;frameset rows="100,*" &gt;
+ &lt;frame src="header.html" frameborder="1"
+ noresize="noresize" <em>scrolling="no"</em>/&gt;
+ &lt;frame src="home.html" frameborder="0" <em>scrolling="yes"</em>/&gt;
+&lt;/frameset&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-frame-src"><dl><dt>The  <code>src</code>
+    attribute loads  header.html and
+     home.html into their respective
+    frames:</dt><dd><pre class="code">&lt;frameset rows="100,*"&gt;
+ &lt;frame <em>src="header.html"</em> frameborder="1"
+ name="nav" title="Navigation window"/&gt;
+ &lt;frame <em>src="home.html"</em> frameborder="0"
+ name="main" title="Main window"/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frameset-cols"><dl><dt>A  frameset
+    comprising 3 columns of windows:</dt><dd><pre class="code">&lt;frameset <em>cols="200,*,100"</em>&gt;
+ &lt;frame src="frame1.html"/&gt;
+ &lt;frame src="frame2.html"/&gt;
+ &lt;frame src="frame3.html"/&gt;
+&lt;/frameset&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-frameset-rows"><dl><dt>A  frameset
+    comprising 3 <code>rows</code> of windows:</dt><dd><pre class="code">&lt;frameset <em>rows="33%,33%,*"</em>&gt;
+ &lt;frame src="frame1.html"/&gt;
+ &lt;frame src="frame2.html"/&gt;
+ &lt;frame src="frame3.html"/&gt;
+&lt;/frameset&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-h1-align"><dl><dt>The  h1 below,
+    identified as a  site-splash-page, will right-align
+    the content inside the  h1 (but as it’s identified with
+    the  id attribute, CSS could—and should—be used to
+    set the alignment):</dt><dd><pre class="code">&lt;h1 id="site-splash-page" <em>align="right"</em>&gt;Our amazing range
+    of services&lt;/h1&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-h2-align"><dl><dt>The  h2 below,
+    identified as a “latest,” will <code>align</code> the content inside the
+     h2 to the right (but as it’s identified with the
+     id attribute, CSS could—and should—be used to set
+    the alignment):</dt><dd><pre class="code">&lt;h2 id="latest" <em>align="right"</em>&gt;Latest news on this site&lt;/h2&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-h3-align"><dl><dt>The  h3 below,
+    identified as “regional,” will center the content inside the
+     h3 (but as it is identified with the
+     id attribute, CSS could—and should—be used for
+    setting the alignment):</dt><dd><pre class="code">&lt;h3 id="regional" <em>align="center"</em>&gt;News from the regions&lt;/h3&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-h4-align"><dl><dt>The  h4 below,
+    identified as “regional-breaking,” will <code>align</code> the content inside the
+     h2 to the right (but as it’s identified with the
+     id attribute, CSS could—and should—be used to set
+    the alignment):</dt><dd><pre class="code">&lt;h4 id="regional-breaking" <em>align="right"</em>&gt;Breaking
+    regional news&lt;/h4&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-h5-align"><dl><dt>The  h5 below,
+    identified as “page-credits,” will <code>align</code> the content inside the
+     h5 to the right (but as it is identified with the
+     id attribute, CSS could—and should—be used to set
+    the alignment):</dt><dd><pre class="code">&lt;h5 id="page-credits" <em>align="right"</em>&gt;Credits for this page&lt;/h5&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-h6-align"><dl><dt>The  h6 below,
+    identified as “contact-points,” will center the content inside the
+     h6 (but as it’s identified with the
+     id attribute, CSS could—and should—be used to set
+    the alignment):</dt><dd><pre class="code">&lt;h6 id="contact-points" <em>align="center"</em>&gt;Points of Contact&lt;/h6&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-head-profile"><dl><dt>This example shows a
+    link to a <code>profile</code> XML file in the site’s root directory:</dt><dd><pre class="code">&lt;head <em>profile="core-defs.xml"</em>&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-hr-color"><dl><dt>This code adds a blue horizontal
+    line below the paragraph:</dt><dd><pre class="code">&lt;p&gt;And with that the actress and the bishop made a rather
+    nice soufflé.&lt;/p&gt;
+&lt;hr <em>color="blue"</em>/&gt;
+&lt;div id="footer"&gt;&amp;copy; All content copyright 2007. Even
+    the unfunny stuff.&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-hr-noshade"><dl><dt>This code sets an unshaded
+    horizontal line after the paragraph:</dt><dd><pre class="code">&lt;p&gt;And with that the actress and the bishop made their excuses
+    and disappeared into the night.&lt;/p&gt;
+&lt;hr <em>noshade="noshade"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-hr-size"><dl><dt>This code places a ten-pixel-high
+    red horizontal rule after the paragraph:</dt><dd><pre class="code">&lt;p&gt;And with that the actress and the bishop apologized for being
+    a real-life, walking-cliché ending to a non-existent joke.&lt;/p&gt;
+&lt;hr color="red" <em>size="10"</em>/&gt;
+&lt;div id="footer"&gt;&amp;copy; All content copyright 2008. Even the
+    unfunny stuff.&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-hr-width"><dl><dt>This code creates a red,
+    ten-pixel-high horizontal line that’s 50% of the <code>width</code> of the containing
+    element:</dt><dd><pre class="code">&lt;p&gt;And with that the actress explained to the bishop, through a
+    series of hand gestures, that she was in fact mute and could not
+    possibly have said what she was reported to have done.&lt;/p&gt;
+&lt;hr color="red" size="10" <em>width="50%"</em>/&gt;
+&lt;div id="footer"&gt;&amp;copy; All content copyright 2007. Even the
+    unfunny stuff.&lt;/div&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-html-xmlns"><dl><dt>Here the
+     <code>xmlns</code> attribute is used to define the default
+    namespace of an XHTML document:</dt><dd><pre class="code">&lt;html <em>xmlns="http://www.w3.org/1999/xhtml"</em> lang="en" xml:lang="en"&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-align"><dl><dt>The  <code>align</code> for
+    this  iframe is set to
+     right:</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" height="200"
+width="200" frameborder="1" <em>align="right"</em>&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-frameborder"><dl><dt>The header frame is given a frame
+    border, the main window has no border:</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" height="200"
+width="200" <em>frameborder="1"</em>&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-height"><dl><dt>The  iframe's
+    <code>height</code> set to 200 pixels</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" <em>height="200"</em>
+width="200" frameborder="1"&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-longdesc"><dl><dt>The  <code>longdesc</code>
+    attribute refers to a text file
+     stocks.txt:</dt><dd><pre class="code">&lt;iframe src="stock-prices.php" height="200" width="200"
+frameborder="1" title="The latest stock prices, including Nikkei,
+FTSE100" <em>longdesc="stocks.txt"</em>&gt;
+&lt;/iframe&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-marginheight"><dl><dt>The  iframe has
+    margin(top and bottom) of 20 pixels applied:</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" height="200"
+width="200" frameborder="1" <em>marginheight="20"</em>&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-marginwidth"><dl><dt>The  iframe
+    content has a 10 pixel margin applied to the sides:</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" height="200"
+width="200" frameborder="1" marginheight="20" <em>marginwidth="20"</em>&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" height="200"
+width="200" frameborder="1" <em>name="floater"</em>&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-scrolling"><dl><dt>Scrolling is disabled on this
+     iframe:</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" height="200"
+width="200" frameborder="1" <em>scrolling="no"</em>&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-src"><dl><dt>The  <code>src</code>
+    attribute loads  stock-prices.php into the
+     iframe:</dt><dd><pre class="code">&lt;iframe <em>src="stock-prices.php"</em> height="200" width="200"
+frameborder="1" title="The latest stock prices, including Nikkei,
+FTSE100" longdesc="stocks.txt"&gt;
+&lt;/iframe&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-iframe-width"><dl><dt>The  iframe's
+    <code>width</code> set to 400 pixels</dt><dd><pre class="code">&lt;iframe src="iframe-content.html" <em>width="400"</em>
+height="200" frameborder="1"&gt;
+&lt;p&gt;Your browser does not support iframes.
+That kinda sucks, eh?&lt;/p&gt;
+&lt;/iframe&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-img-align"><dl><dt>The
+     <code>align</code> attribute for this  img is
+    set to  right:</dt><dd><pre class="code">&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    <em>align="right"</em>/&gt;Driving along, we spotted a giant prawn, so had to
+    stop and take a closer look.&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-img-alt"><dl><dt>The
+     <code>alt</code> attribute clearly explains what the image
+    contains:</dt><dd><pre class="code">&lt;img src="giant-prawn.jpg" <em>alt="The Giant Prawn at Ballina"</em> /&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-img-border"><dl><dt>This
+     <code>border</code> attribute is set to
+     5:</dt><dd><pre class="code">&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    <em>border="5"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-img-height"><dl><dt>Here, the
+     <code>height</code> attribute is set to
+     30:</dt><dd><pre class="code">&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    <em>height="30"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-img-hspace"><dl><dt>Here, the
+     <code>hspace</code> attribute is set to  10
+    pixels around a left-aligned image:</dt><dd><pre class="code">&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    align="left" <em>hspace="10"</em>/&gt;Driving along, we spotted a giant prawn,
+    so we had to stop and take a closer look.&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-img-ismap"><dl><dt>The
+     <code>ismap</code> attribute is set as follows:</dt><dd><pre class="code">&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    <em>ismap="ismap"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-img-longdesc"><dl><dt>This
+     <code>longdesc</code> attribute refers to a text file
+     prawn.txt:</dt><dd><pre class="code">&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    <em>longdesc="prawn.txt"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-img-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    <em>name="giantprawn"</em>/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-img-src"><dl><dt>The  <code>src</code>
+    attribute for this image shows that the image is located in the same
+    directory as the web page:</dt><dd><pre class="code">&lt;img <em>src="giant-prawn.jpg"</em> alt="The Giant Prawn at Ballina"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-img-usemap"><dl><dt>Here, the
+     <code>usemap</code> attribute references a map named
+     bigthings:</dt><dd><pre class="code">&lt;map name="bigthings" id="bigthings"&gt;
+  &lt;area shape="rect" coords="35,4,205,108"
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      alt="Australia's Big Things (on Wikipedia)"/&gt;
+  &lt;area shape="rect" coords="136,163,255,230"
+      href="http://vwkombi.com/"
+      alt="The VW Kombi, another Aussie icon"/&gt;
+&lt;/map&gt;
+⋮
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+<em>usemap="#bigthings"</em>/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-img-vspace"><dl><dt>This
+     <code>vspace</code> attribute is set to  10
+    pixels around a left-aligned image:</dt><dd><pre class="code">&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    align="left" <em>vspace="10"</em>/&gt;Driving along, we spotted a giant prawn,
+    so we had to stop and take a closer look.&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-img-width"><dl><dt>Here, the
+     <code>width</code> attribute is set to
+     300:</dt><dd><pre class="code">&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+    <em>width="300"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-accept"><dl><dt>Here, the
+     <code>accept</code> attribute is used in a file upload
+     input:</dt><dd><pre class="code">&lt;input type="file" name="picture" id="picture"
+    <em>accept="image/jpeg"</em>/&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-input-accesskey"><dl><dt>The
+     <code>accesskey</code> for this  input is
+    assigned to  f:</dt><dd><pre class="code">&lt;label for="firstname"&gt;First name&lt;/label&gt;
+&lt;input type="text" name="firstname" id="firstname" <em>accesskey="f"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-align"><dl><dt>The
+     <code>align</code> attribute for this input is set to
+     right:</dt><dd><pre class="code">&lt;form&gt;
+  ⋮
+  &lt;input type="image" src="submit.jpg" alt="Submit your details"
+      <em>align="right"</em>/&gt;
+  &lt;p&gt;This a load of explanatory text that we need at the end of the
+      form. This a load of explanatory text that we need at the end of
+      the form. This a load of explanatory text that we need at the end
+      of the form. &lt;/p&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-alt"><dl><dt>This code shows the
+     <code>alt</code> attribute for a form’s image submit
+     input:</dt><dd><pre class="code">&lt;form&gt;
+  ⋮
+  &lt;input type="image" src="submit.jpg"
+      <em>alt="Submit your details"</em>/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-checked"><dl><dt>This  <code>checked</code>
+    attribute is applied to a newsletter signup checkbox:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;input type="checkbox" name="chknewsletter" id="chknewsletter"
+      <em>checked="checked"</em>/&gt;
+  &lt;label for="chknewsletter"&gt;Send me the monthly newsletter&lt;/label&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-disabled"><dl><dt>Here’s an example of the <code>disabled</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;input type="checkbox" name="chknewsletter" id="chknewsletter"
+      checked="checked" <em>disabled="disabled"</em>/&gt;
+  &lt;label for="chknewsletter"&gt;Send me the monthly newsletter&lt;/label&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-maxlength"><dl><dt>This
+     <code>maxlength</code> attribute restricts entries in this
+    password field to a maximum of four characters:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="pin"&gt;Your 4-digit PIN:&lt;/label&gt;
+  &lt;input type="password" name="pin" id="pin"
+      <em>maxlength="4"</em> size="6"/&gt;
+  ⋮
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-input-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="pin"&gt;Your 4-digit PIN:&lt;/label&gt;
+  &lt;input type="password" <em>name="pin"</em> id="pin" maxlength="4" size="6"/&gt;
+  ⋮
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-readonly"><dl><dt>Here’s an example of the <code>readonly</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="town"&gt;Postal Town:&lt;/label&gt;
+  &lt;input type="text" name="town" id="town" <em>readonly="readonly"</em>
+      value="Southampton"/&gt;
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-input-size"><dl><dt>Here’s an example of the <code>size</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="pin"&gt;Your 4-digit PIN:&lt;/label&gt;
+  &lt;input type="password" name="pin" id="pin" maxlength="4" <em>size="6"</em>/&gt;
+  ⋮
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-src"><dl><dt>The  <code>src</code>
+    attribute for this image input shows that the image resides in the same
+    directory as the web page that references it:</dt><dd><pre class="code">&lt;form&gt;
+  ⋮
+  &lt;input type="image" <em>src="submit.jpg"</em> alt="Submit your details"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-tabindex"><dl><dt>The  <code>tabindex</code>
+    is set for the form control below:</dt><dd><pre class="code">&lt;form&gt;
+  ⋮
+  &lt;label for="pin"&gt;Your 4-digit PIN:&lt;/label&gt;
+  &lt;input type="password" name="pin" id="pin" <em>tabindex="2"</em>/&gt;
+  ⋮
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-type"><dl><dt>The  <code>type</code> is
+    set to  text for this
+     input:</dt><dd><pre class="code">&lt;input <em>type="text"</em> name="txtsearch" id="txtsearch" size="20"/&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-input-usemap"><dl><dt>The  <code>usemap</code>
+    attribute below references a map named
+     sections:</dt><dd><pre class="code">&lt;map <em>name="sections"</em>&gt;
+  &lt;area shape="circle" coords="70,84,51" href="/default.html"/&gt;
+  &lt;area shape="rect" coords="25,180,125,280" href="/about.html"/&gt;
+  ⋮
+&lt;/map&gt;
+  ⋮
+&lt;form&gt;
+  ⋮
+  &lt;input type="image" src="submit.jpg" alt="Submit your details"
+      <em>usemap="#sections"</em>/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-input-value"><dl><dt>This code sets a predefined
+     <code>value</code> of  Enter search phrase
+    for a text input:</dt><dd><pre class="code">&lt;input type="text" name="search" value="Enter search phrase"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-ins-cite"><dl><dt>The  <code>cite</code>
+    attribute is used in conjunction with both the  del and
+     ins elements below:</dt><dd><pre class="code">&lt;p&gt;Bernie enjoyed nothing more than a &lt;del
+    <em>cite="http://berniesworld.com/drag.html"</em>
+    datetime="2007-11-05T23:31:05Z"&gt;night out on the town at his
+    favorite drag queen show&lt;/del&gt; &lt;ins
+     <em>cite="http://berniesworld.com/drag.html"</em>
+    datetime="2007-11-05T23:33:32Z"&gt;quiet night in with a warm cup of
+    cocoa&lt;/ins&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-ins-datetime"><dl><dt>The  <code>datetime</code>
+    attribute is used in both the  del and
+     ins elements below:</dt><dd><pre class="code">&lt;p&gt;Bernie enjoyed nothing more than a &lt;del
+    cite="http://berniesworld.com/drag.html"
+    <em>datetime="2007-11-05T23:31:05Z"</em>&gt;night out on the town at his
+    favorite drag queen show&lt;/del&gt; &lt;ins
+    cite="http://berniesworld.com/drag.html"
+    <em>datetime="2007-11-05T23:33:32Z"</em>&gt;quiet night in with a warm cup of
+    cocoa&lt;/ins&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-label-accesskey"><dl><dt>The
+     <code>accesskey</code> for the radio button control in this
+    example is assigned to  b:</dt><dd><pre class="code">&lt;input type="radio" name="radFriendship" value="Not_Applicable"
+    <em>id="b"</em>/&gt;
+&lt;label <em>for="b" accesskey="b"</em>&gt;Not_Applicable&lt;/label&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-label-for"><dl><dt>This  <code>for</code>
+    attribute points to a  form control with the
+     id of  b:</dt><dd><pre class="code">&lt;input type="radio" name="radFriendship" value="Not_Applicable"
+    <em>id="b"</em>/&gt;
+&lt;label <em>for="b"</em> accesskey="b"&gt;Not_Applicable&lt;/label&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-legend-accesskey"><dl><dt>The
+     <code>accesskey</code> for this group of controls is assigned to
+     1:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend <em>accesskey="1"</em>&gt;Friendship&lt;/legend&gt;
+    &lt;input type="radio" name="radFriendship" value="Not_Applicable"
+        id="radFriendNot_Applicable"/&gt;
+    &lt;label for="radFriendNot_Applicable"&gt;Not_Applicable&lt;/label&gt;
+    &lt;input type="radio" name="radFriendship" value="acquaintance"
+        id="radFriendaquaintence"/&gt;
+    &lt;label for="radFriendaquaintence"&gt;acquaintance&lt;/label&gt;
+    &lt;input type="radio" name="radFriendship" value="friend"
+        id="radFriendfriend"/&gt;
+    &lt;label for="radFriendfriend"&gt;friend&lt;/label&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-legend-align"><dl><dt>The  <code>align</code>
+    attribute for this group of controls is set to
+     right:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend accesskey="1" <em>align="right"</em>&gt;Friendship&lt;/legend&gt;
+    &lt;input type="radio" name="radFriendship" value="Not_Applicable"
+        id="radFriendNot_Applicable"/&gt;
+    &lt;label for="radFriendNot_Applicable"&gt;Not_Applicable&lt;/label&gt;
+    &lt;input type="radio" name="radFriendship" value="acquaintance"
+        id="radFriendaquaintence"/&gt;
+    &lt;label for="radFriendaquaintence"&gt;acquaintance&lt;/label&gt;
+    &lt;input type="radio" name="radFriendship" value="friend"
+        id="radFriendfriend"/&gt;
+    &lt;label for="radFriendfriend"&gt;friend&lt;/label&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-li-type"><dl><dt>The example below shows one item in
+    an unordered list with the  <code>type</code> set to
+     circle:</dt><dd><pre class="code">&lt;ul&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li <em>type="circle"</em>&gt;Cheese&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Papadums&lt;/li&gt;
+  &lt;li&gt;Tickle-me Elmo&lt;/li&gt;
+  &lt;li&gt;Dr Who Remote Control Dalek&lt;/li&gt;
+&lt;/ul&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-li-value"><dl><dt>The example below shows an ordered
+    list item whose  <code>value</code> is set to
+     99:</dt><dd><pre class="code">&lt;ol&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Cheese&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li <em>value="99"</em>&gt;Papadums&lt;/li&gt;
+  &lt;li&gt;Tickle-me Elmo&lt;/li&gt;
+  &lt;li&gt;Dr Who Remote Control Dalek&lt;/li&gt;
+&lt;/ol&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-link-charset"><dl><dt>This example indicates that the
+    referenced document is written in Japanese:</dt><dd><pre class="code">&lt;link href="okinawa.html" rel="parent" <em>charset="euc-jp"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-link-href"><dl><dt>The example below shows a link to a
+    style sheet in the same directory (or folder) as the linking document on
+    the server’s file system:</dt><dd><pre class="code">&lt;link rel="stylesheet" type="text/css" <em>href="basic.css"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-link-hreflang"><dl><dt>Both of the documents referenced are
+    stated as being in Japanese:</dt><dd><pre class="code">&lt;link href="categories.html" <em>hreflang="ja"</em> rel="subsection"/&gt;
+&lt;link href="index.html" <em>hreflang="ja"</em> rel="parent"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-link-media"><dl><dt>This example shows the application
+    of two different styles for two different media:</dt><dd><pre class="code">&lt;link rel="stylesheet" href="basic.css" <em>media="screen"</em>/&gt;
+&lt;link rel="stylesheet" href="print.css" <em>media="print"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-link-rel"><dl><dt>In this example, the
+     <code>rel</code> attribute indicates that the referenced
+    document is a style sheet:</dt><dd><pre class="code">&lt;link <em>rel="stylesheet"</em> href="basic.css"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-link-rev"><dl><dt>Here, the  <code>rev</code>
+    is used to identify the page as the parent for the categories
+    page:</dt><dd><pre class="code">&lt;link rel="subsection" <em>rev="parent"</em> href="categories.html"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-link-target"><dl><dt>Here’s an example of the <code>target</code> attribute in action:</dt><dd><pre class="code">&lt;link rel="subsection" rev="parent" <em>target="subframe"</em>
+    href="categories.html"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-link-type"><dl><dt>In this example, the
+     <code>type</code> is set to  text/css to
+    indicate that the linked resource is a CSS style sheet:</dt><dd><pre class="code">&lt;link rel="stylesheet" <em>type="text/css" </em>href="global.css" /&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-map-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;map <em>name="bigthings"</em>&gt;
+  &lt;area shape="rect" coords="35,4,205,108"
+      href="http://en.wikipedia.org/wiki/Australia's_Big_Things"
+      alt="Australia's Big Things (on Wikipedia)"/&gt;
+  &lt;area shape="rect" coords="136,163,255,230"
+      href="http://vwkombi.com/" alt="The VW Kombi,
+      another Aussie icon"/&gt;
+&lt;/map&gt;
+⋮
+&lt;p&gt;&lt;img src="giant-prawn.jpg" alt="The Giant Prawn at Ballina"
+border="0" <em>usemap="#bigthings"</em>/&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-align"><dl><dt>Here’s an example of the <code>align</code> attribute in action:</dt><dd><pre class="code">&lt;marquee width="300" <em>align="right"</em>&gt;This
+news just in ⋮&lt;/marquee&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-behavior"><dl><dt>The following text will bounce from
+    left to right:</dt><dd><pre class="code">&lt;p&gt;&lt;marquee <em>behavior="alternate"</em>&gt;Bouncy bouncy!&lt;/marquee&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-bgcolor"><dl><dt>Here’s an example of the <code>bgcolor</code> attribute in action:</dt><dd><pre class="code">&lt;marquee <em>bgcolor="red"</em>&gt;Danger! Danger!&lt;/marquee&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-direction"><dl><dt>The  <code>direction</code>
+    for this  marquee is set to
+     right:</dt><dd><pre class="code">&lt;p&gt;&lt;marquee <em>direction="right"</em>&gt;This this text
+should scroll from left to right&lt;/marquee&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-height"><dl><dt>The  <code>height</code>
+    attribute set to  200:</dt><dd><pre class="code">&lt;marquee <em>height="200"</em>&gt;Important!&lt;/marquee&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-hspace"><dl><dt>The  <code>hspace</code>
+    attribute set to  50 pixels:</dt><dd><pre class="code">&lt;p&gt;&lt;marquee <em>hspace="50"</em>&gt;This marquee text
+demands more room&lt;/marquee&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-loop"><dl><dt>The  marquee is
+    set to <code>loop</code> just twice:</dt><dd><pre class="code">&lt;p&gt;&lt;marquee <em>loop="2"</em>&gt;Scroll me across the
+screen just twice please&lt;/marquee&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-scrollamount"><dl><dt>Here’s an example of the <code>scrollamount</code> attribute in action:</dt><dd><pre class="code">&lt;p&gt;&lt;marquee <em>scrollamount="20"</em>&gt;This is a bit fast&lt;/marquee&gt;&lt;/p&gt;
+&lt;p&gt;&lt;marquee <em>scrollamount="50"</em>&gt;This way too fast&lt;/marquee&gt;&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-scrolldelay"><dl><dt>The
+     <code>scrolldelay</code> is set to 200
+    milliseconds:</dt><dd><pre class="code">&lt;p&gt;&lt;marquee <em>scrolldelay="200"</em>&gt;I'm putting the brakes
+on this scrolling message&lt;/marquee&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-title"><dl><dt>The  <code>title</code>
+	attribute is shown below:</dt><dd><pre class="code">&lt;p&gt;The page had the phrase &lt;abbr <em>title="Please Turn Over"</em>&gt;PTO&lt;/abbr&gt;
+written on it. If only I knew what PTO meant. So I turned the page
+to see if that revealed the answer.&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-vspace"><dl><dt>The  <code>vspace</code>
+    attribute set to  50 pixels:</dt><dd><pre class="code">&lt;p&gt;&lt;marquee <em>vspace="50"</em>&gt;This marquee text
+demands more room&lt;/marquee&gt;&lt;/p&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-marquee-width"><dl><dt>The  <code>width</code>
+    attribute set to  300:</dt><dd><pre class="code">&lt;marquee <em>width="300"</em>&gt;Latest News&lt;/marquee&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-menu-compact"><dl><dt>This example shows the
+     <code>compact</code> attribute applied to the report menu list
+    shown earlier:</dt><dd><pre class="code">&lt;menu <em>compact="compact"</em>&gt;
+&lt;li&gt;Main menu&lt;/li&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;Executive summary&lt;/li&gt;
+&lt;/menu&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-meta-content"><dl><dt>Here, the
+     <code>content</code> attribute contains a list of categories
+    that the document relates to:</dt><dd><pre class="code">&lt;meta name="categories" <em>content="work, projects, current"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-meta-http-equiv"><dl><dt>This
+     <code>http-equiv</code> attribute defines the character set for
+    the document:</dt><dd><pre class="code">&lt;meta <em>http-equiv="Content-Type"</em> content="text/html; charset=UTF-8"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-meta-name"><dl><dt>This  <code>name</code>
+    attribute identifies the content as
+     categories:</dt><dd><pre class="code">&lt;meta <em>name="categories"</em> content="work, projects, current"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-meta-scheme"><dl><dt>This
+     <code>scheme</code> attribute identifies a Dublin Core date
+    scheme:</dt><dd><pre class="code">&lt;meta name="DC.date" content="2003-06-08" <em>scheme="DCTERMS.W3CDTF"</em> /&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-align"><dl><dt>The
+     <code>align</code> attribute for this  object
+    is set to  right:</dt><dd><pre class="code">&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" <em>align="right"</em> width="320"
+    height="285" title="Flash tester"&gt;
+  &lt;param name="movie" value="flash-test.swf"/&gt;
+  &lt;param name="quality" value="high"/&gt;
+&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-archive"><dl><dt>In this code, the
+     <code>archive</code> attribute obtains supporting classes from
+    “giant-dog.jar”:</dt><dd><pre class="code">&lt;object classid="java:giant-dog.class" <em>archive="giant-dog.jar"</em>&gt;
+&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-border"><dl><dt>This
+     <code>border</code> attribute is set to
+     10:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" <em>border="10"</em>&gt;&lt;/object&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-object-classid"><dl><dt>This example shows the definition of
+    a  <code>classid</code> attribute for a Flash
+    movie:</dt><dd><pre class="code">&lt;object <em>classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"</em>
+    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="320" height="285" title="Flash
+    tester"&gt;
+  &lt;param name="movie" value="flash-test.swf"/&gt;
+  &lt;param name="quality" value="high"/&gt;
+  ⋮
+&lt;/object&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-object-codebase"><dl><dt>Here,
+     <code>codebase</code> defines the base URL of
+     http://bestjavaappsever.com/classes/:</dt><dd><pre class="code">&lt;object classid="calendar.class"
+    <em>codebase="http://bestjavaappsever.com/classes/"</em>&gt;&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-codetype"><dl><dt>This  <code>codetype</code>
+    attribute identifies an embedded Word document:</dt><dd><pre class="code">&lt;object data="Hello.doc" <em>codetype="application/msword"</em>&gt;&lt;/object&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-object-data"><dl><dt>The  <code>data</code>
+    attribute for this object refers to a “.jpg”
+    file:</dt><dd><pre class="code">&lt;object <em>data="giant-dog.jpg"</em>
+    type="image/jpeg" height="225"&gt;&lt;/object&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-object-declare"><dl><dt>Here’s the
+     <code>declare</code> attribute, specified in XHTML-compliant
+    markup:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" <em>declare="declare"</em>
+    type="image/jpeg" height="225"&gt;&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-height"><dl><dt>Here, the
+     <code>height</code> attribute is set to
+     100:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" <em>height="100"</em>&gt;
+&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-hspace"><dl><dt>This
+     <code>hspace</code> attribute is set to 30 pixels around a
+    left-aligned image object:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" height="225" width="300" align="left"
+    <em>hspace="30"</em>&gt;&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" height="225" width="300"
+    align="left" vspace="30" <em>name="dog-information-kiosk"</em>&gt;
+&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-standby"><dl><dt>Here, the
+     <code>standby</code> attribute is used to warn users of a
+    download delay:</dt><dd><pre class="code">&lt;object data="Kuata-Joinup.jpg" width="4466" height="535"
+    <em>standby="This may take a while. Go put the kettle on."</em>&gt;
+&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-tabindex"><dl><dt>This code sets the
+     <code>tabindex</code> for both form controls:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" height="225" <em>tabindex="1"</em>&gt;&lt;/object&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-object-type"><dl><dt>This  <code>type</code>
+    attribute is set to  image/gif to display a
+    “.gif” image:</dt><dd><pre class="code">&lt;object data="logo.gif" <em>type="image/gif"</em>&gt;&lt;/object&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-object-usemap"><dl><dt>This
+     <code>usemap</code> attribute references a map named
+     dogmap:</dt><dd><pre class="code">&lt;p&gt;
+  &lt;object data="giant-dog.jpg" <em>usemap="#dogmap"</em>
+      height="225" width="300" border="0"&gt;&lt;/object&gt;
+  &lt;map name="dogmap" id="dogmap"&gt;
+    &lt;area shape="circle" coords="216,120,24"
+        href="http://tirauinfo.homestead.com/TheBigDog.html"
+        alt="Click on the nose for more info about this big dog!"/&gt;
+  &lt;/map&gt;
+&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-vspace"><dl><dt>The
+     <code>vspace</code> attribute is set to  30
+    pixels around a left-aligned image object:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" height="225" width="300" align="left"
+    <em>vspace="30"</em>&gt;&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-object-width"><dl><dt>Here, the
+     <code>width</code> attribute is set to
+     200:</dt><dd><pre class="code">&lt;object data="giant-dog.jpg" height="100" <em>width="200"</em>&gt;
+&lt;/object&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-ol-compact"><dl><dt>Here’s
+     <code>compact</code> applied to the maintenance instructions we
+    saw earlier:</dt><dd><pre class="code">&lt;ol <em>compact="compact"</em>&gt;
+  &lt;li&gt;Remove the outer casing by pushing the plastic rivets
+      through.&lt;/li&gt;
+  &lt;li&gt;Disconnect the main power harness from the inner unit
+      (unclip).&lt;/li&gt;
+  &lt;li&gt;Remove connection to the glow plug.&lt;/li&gt;
+  &lt;li&gt;Extract unit, keeping upright at all times.&lt;/li&gt;
+
+&lt;/ol&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-ol-start"><dl><dt>This example shows the
+     <code>start</code> attribute applied to the maintenance steps
+    shown earlier, using a lowercase roman character sequence with a <code>start</code>
+    position of 4:</dt><dd><pre class="code">&lt;ol type="i" <em>start="4"</em>&gt;
+  &lt;li&gt;Remove the outer casing by pushing the plastic rivets
+      through.&lt;/li&gt;
+  &lt;li&gt;Disconnect the main power harness from the inner unit
+      (unclip).&lt;/li&gt;
+  &lt;li&gt;Remove connection to the glow plug.&lt;/li&gt;
+  &lt;li&gt;Extract unit, keeping upright at all times.&lt;/li&gt;
+
+&lt;/ol&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-ol-type"><dl><dt>This example shows the
+     <code>type</code> attribute applied to the maintenance steps
+    shown earlier:</dt><dd><pre class="code">&lt;ol <em>type="i"</em>&gt;
+  &lt;li&gt;Remove the outer casing by pushing the plastic rivets
+      through.&lt;/li&gt;
+  &lt;li&gt;Disconnect the main power harness from the inner unit
+      (unclip).&lt;/li&gt;
+  &lt;li&gt;Remove connection to the glow plug.&lt;/li&gt;
+  &lt;li&gt;Extract unit, keeping upright at all times.&lt;/li&gt;
+
+&lt;/ol&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-optgroup-disabled"><dl><dt>Here’s an example of the <code>disabled</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+ &lt;select name="favoritefood"&gt;
+  &lt;optgroup label="Dairy products"&gt;
+   &lt;option&gt;Cheese&lt;/option&gt;
+   &lt;option&gt;Egg&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Vegetables" <em>disabled="disabled"</em>&gt;
+   &lt;option&gt;Cabbage&lt;/option&gt;
+   &lt;option&gt;Lettuce&lt;/option&gt;
+   &lt;option&gt;Beans&lt;/option&gt;
+   &lt;option&gt;Onions&lt;/option&gt;
+   &lt;option&gt;Courgettes&lt;/option&gt;
+  &lt;/optgroup&gt;
+  ⋮
+ &lt;/select&gt;
+&lt;/form&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-optgroup-label"><dl><dt>Here’s an example of the <code>label</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;select name="favoritefood"&gt;
+    &lt;optgroup <em>label="Dairy products"</em>&gt;
+      &lt;option&gt;Cheese&lt;/option&gt;
+      &lt;option&gt;Egg&lt;/option&gt;
+    &lt;/optgroup&gt;
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-option-disabled"><dl><dt>Here’s an example of the <code>disabled</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood"&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option&gt;Egg&lt;/option&gt;
+    <em>&lt;option disabled="disabled"&gt;Cabbage&lt;/option&gt;
+    &lt;option disabled="disabled"&gt;Lettuce&lt;/option&gt;</em>
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-option-label"><dl><dt>Here’s an example of the <code>label</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood"&gt;
+    ⋮
+    &lt;optgroup label="Vegetables"&gt;
+      &lt;option <em>label="Cabbage"</em>&gt;Cabbage (local produce)&lt;/option&gt;
+      &lt;option <em>label="Lettuce"</em>&gt;Lettuce (local produce)&lt;/option&gt;
+      &lt;option <em>label="Beans"</em>&gt;Beans (tinned)&lt;/option&gt;
+      &lt;option <em>label="Onions"</em>&gt;Onions (local produce, non-GM)&lt;/option&gt;
+    &lt;/optgroup&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-option-selected"><dl><dt>Here’s an example of the <code>selected</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood" disabled="disabled"&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option <em>selected="selected"</em>&gt;Egg&lt;/option&gt;
+    &lt;option&gt;Cabbage&lt;/option&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-option-value"><dl><dt>In this example,
+     <code>value</code> attributes are specified for a series of
+     options:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood" disabled="disabled"&gt;
+    &lt;option <em>value="1"</em>&gt;Cheese&lt;/option&gt;
+    &lt;option <em>value="2"</em>&gt;Egg&lt;/option&gt;
+    &lt;option <em>value="3"</em>&gt;Cabbage&lt;/option&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-p-align"><dl><dt>The  <code>align</code>
+    attribute below will center the content inside the two paragraphs (but CSS
+    could—and should—be used to set the alignment):</dt><dd><pre class="code">&lt;p <em>align="center"</em>&gt;
+    Starter: Fruit Salad
+&lt;/p&gt;
+&lt;p <em>align="center"</em>&gt;
+    Main Course: Roast Duck
+&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-param-name"><dl><dt>The <code>name</code> of the parameter here is
+     shape: </dt><dd><pre class="code">&lt;param <em>name="shape"</em> value="triangle"/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-param-type"><dl><dt>This code shows a
+     param element whose  <code>type</code> is set
+    to  video/mp4:</dt><dd><pre class="code">&lt;param <em>type="video/mp4"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-param-value"><dl><dt>The <code>value</code> of this
+     shape parameter is  triangle:
+    </dt><dd><pre class="code">&lt;param name="shape" <em>value="triangle"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-param-valuetype"><dl><dt>The  <code>valuetype</code>
+    of the  shape parameter here is
+     ref, as the  value is a
+     reference to a URL: </dt><dd><pre class="code">&lt;param name="shape" value="poly.txt" <em>valuetype="ref"</em>/&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-q-cite"><dl><dt>This example shows a quote with the
+    correct attribution in the form of the  <code>cite</code>
+    attribute:</dt><dd><pre class="code">&lt;p&gt;Heck, even Bill Gates is quoted as saying <em>&lt;q
+    cite="http://microformats.org/blog/2006/03/20/bill-gates-at-mix06-we-need-microformats/"&gt;We
+    need Microformats,&lt;/q&gt;</em> which can only be a
+    good thing for the cause.&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-rt-rbspan"><dl><dt>In this code, the English annotation
+    is set to span all four of the Japanese characters:</dt><dd><pre class="code">&lt;ruby xml:lang="ja"&gt;
+  &lt;rbc&gt;
+    &lt;rb&gt;斎&lt;/rb&gt;
+    &lt;rb&gt;藤&lt;/rb&gt;
+    &lt;rb&gt;信&lt;/rb&gt;
+    &lt;rb&gt;男&lt;/rb&gt;
+  &lt;/rbc&gt;
+  &lt;rtc class="reading"&gt;
+    &lt;rt&gt;さい&lt;/rt&gt;
+    &lt;rt&gt;とう&lt;/rt&gt;
+    &lt;rt&gt;のぶ&lt;/rt&gt;
+    &lt;rt&gt;お&lt;/rt&gt;
+  &lt;/rtc&gt;
+  &lt;rtc class="annotation"&gt;
+    &lt;rt <em>rbspan="4"</em> xml:lang="en"&gt;W3C
+    Associate Chairman&lt;/rt&gt;
+  &lt;/rtc&gt;
+&lt;/ruby&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-script-charset"><dl><dt>This example shows a
+     script file that’s using a slightly different character
+    encoding from the default  ISO-8859-1:</dt><dd><pre class="code">&lt;script type="text/javascript" src="/scripts/common.js"
+  <em>charset="ISO-8859-15"</em>&gt;&lt;/script&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-script-defer"><dl><dt>This example shows a
+     script element with the  <code>defer</code>
+    attribute set in order to prevent the alert from taking place too early
+    (at which point the button being referred to does not yet
+    exist):</dt><dd><pre class="code">&lt;script type="text/javascript" <em>defer</em>&gt;
+  alert(document.forms[0].cmdButton.value);
+&lt;/script&gt;
+⋮
+&lt;form&gt;
+  &lt;input type="submit" name="cmdButton" value="Send it"&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-script-language"><dl><dt>In this example, a
+     script is identified as requiring JavaScript
+    1.2-capable browsers:</dt><dd><pre class="code">&lt;script <em>language="JavaScript1.2"</em> src="/scripts/complex.js"&gt;&lt;/script&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-script-src"><dl><dt>In this example, the
+     <code>src</code> attribute refers to a script file named
+     complex.js:</dt><dd><pre class="code">&lt;script type="text/javascript" <em>src="/scripts/complex.js"</em>&gt;&lt;/script&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-script-type"><dl><dt>In this example, the
+     <code>type</code> attribute identifies the
+     script as plain text content comprising JavaScript
+    code:</dt><dd><pre class="code">&lt;script <em>type="text/javascript"</em> src="/scripts/complex.js"&gt;&lt;/script&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-script-xmlspace"><dl><dt>This  script
+    element’s whitespace set to  preserve in XHTML
+    1.0:</dt><dd><pre class="code">&lt;script type="text/javascript" src="/scripts/complex.js"
+    <em>xml:space="preserve"</em>&gt;&lt;/script&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-select-accesskey"><dl><dt>The
+     <code>accesskey</code> for this  select is
+    assigned to  f:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood" <em>accesskey="f"</em>&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option&gt;Egg&lt;/option&gt;
+    &lt;option&gt;Cabbage&lt;/option&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-select-disabled"><dl><dt>Here’s an example of the <code>disabled</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood"
+      <em>disabled="disabled"</em>&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option&gt;Egg&lt;/option&gt;
+    &lt;option&gt;Cabbage&lt;/option&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-select-multiple"><dl><dt>Here’s an example of the <code>multiple</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood"
+      <em>multiple="multiple"</em> size="10"&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option&gt;Egg&lt;/option&gt;
+    &lt;option&gt;Cabbage&lt;/option&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-select-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select <em>name="favoritefood"</em> id="favoritefood"&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option&gt;Egg&lt;/option&gt;
+    &lt;option&gt;Cabbage&lt;/option&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-select-size"><dl><dt>Here’s an example of the <code>size</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="favoritefood"&gt;Favorite food&lt;/label&gt;
+  &lt;select name="favoritefood" id="favoritefood"
+      multiple="multiple" <em>size="5"</em>&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option&gt;Egg&lt;/option&gt;
+    &lt;option&gt;Cabbage&lt;/option&gt;
+    ⋮
+  &lt;/select&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-select-tabindex"><dl><dt>The  <code>tabindex</code>
+    is set for both form controls in this example:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" <em>tabindex="1"</em> name="perfectday"
+      accesskey="d" cols="40" rows="10"&gt;Sitting by the beach,
+      sipping a cocktail&lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us" <em>tabindex="2"</em>/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-style-media"><dl><dt>In this example, we have two
+    different <code>media</code> types to which two different styles are
+    applied:</dt><dd><pre class="code">&lt;style type="text/css" <em>media="screen"</em>&gt;
+  #nav {background:#006; padding:2em;}
+⋮
+&lt;/script&gt;
+&lt;style type="text/css" <em>media="print"</em>&gt;
+  #nav {display:none}
+⋮
+&lt;/script&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-style-type"><dl><dt>In this example, the MIME <code>type</code> is
+    set to  text/css to indicate that it’s standard CSS
+    text:</dt><dd><pre class="code">&lt;style <em>type="text/css"</em>&gt;
+⋮
+&lt;/script&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-style-xmlspace"><dl><dt>The  script
+    whitespace is set to  preserve in XHTML 1.0 using
+     xml:space value of
+     preserve:</dt><dd><pre class="code">&lt;style type="text/css" <em>xml:space="preserve"</em>&gt;
+  #nav      {color:red;}
+  #logo     {color:lime;}
+  #branding {color:black;}
+&lt;/style&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-align"><dl><dt>The
+     <code>align</code> attribute for this  table
+    is set to  right:</dt><dd><pre class="code">&lt;table <em>align="right"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-bgcolor"><dl><dt>The  <code>bgcolor</code>
+    for this  table is set to  #99FF66
+    (a light green shade):</dt><dd><pre class="code">&lt;table <em>bgcolor="#99FF66"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-border"><dl><dt>The  <code>border</code>
+    for this  table is set to  1
+    pixel:</dt><dd><pre class="code">&lt;table <em>border="1"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-cellpadding"><dl><dt>The
+     <code>cellpadding</code> for this  table is
+    set to  5 pixels:</dt><dd><pre class="code">&lt;table border="1" <em>cellpadding="5"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-cellspacing"><dl><dt>The
+     <code>cellspacing</code> for this  table is
+    set to  5 pixels:</dt><dd><pre class="code">&lt;table border="1" <em>cellspacing="5"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-frame"><dl><dt>The  <code>frame</code> for
+    this  table is set to
+     hsides:</dt><dd><pre class="code">&lt;table <em>frame="hsides"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-rules"><dl><dt>The  <code>rules</code>
+    attribute for this  table is set to
+     rows:</dt><dd><pre class="code">&lt;table <em>rules="rows"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-summary"><dl><dt>The  <code>summary</code>
+    for this  table provides more information about its
+    contents:</dt><dd><pre class="code">&lt;table <em>summary="Interest rates start at 1.6% for Young Savers
+    accounts and at 2% for Smart accounts"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-table-width"><dl><dt>This  <code>width</code>
+    attribute is set to  400 pixels:</dt><dd><pre class="code">&lt;table <em>width="400"</em>&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Account Type&lt;/th&gt;
+    &lt;th&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-tbody-align"><dl><dt>This  tbody will
+    set all text inside the nested  td elements to <code>align</code> to
+    the right:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody <em>align="right"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tbody-char"><dl><dt>This  align
+    attribute is set to match the position of the % character:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody align="char" <em>char="%"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tbody-charoff"><dl><dt>Here, the character alignment offset
+    is set to  2 characters:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody align="char" char="%" <em>charoff="2"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tbody-valign"><dl><dt>The  <code>valign</code>
+    attribute is set to  bottom on this narrow
+    table:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="200" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type (Name titles as per Spring 2006 range)&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody <em>valign="bottom"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-td-abbr"><dl><dt>This table, which lists vehicle
+    details, shows the  <code>abbr</code> attribute at
+     th and  td level:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th abbr="Make"&gt;Car manufacturer (make)&lt;/th&gt;
+    &lt;th abbr="Model"&gt;Vehicle model (name/spec)&lt;/th&gt;
+    &lt;th abbr="Revised"&gt;Date of last revision &lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td <em>abbr="VW"</em>&gt;Volkswagen&lt;/td&gt;
+    &lt;td <em>abbr="Golf"</em>&gt;Golf 2.8 GTi&lt;/td&gt;
+    &lt;td <em>abbr="2007"</em>&gt;June 2007&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-td-align"><dl><dt>Here, the browser default alignment
+    of  left in the  td is overridden to
+    <code>align</code> the content  right:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;td <em>align="right"</em>&gt;Fred&lt;/td&gt;
+  &lt;td <em>align="right"</em>&gt;fred@megacorp.com&lt;/td&gt;
+  &lt;td <em>align="right"</em>&gt;123456&lt;/td&gt;
+  &lt;td rowspan="2" <em>align="right"</em>&gt;1/A&lt;/td&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-axis"><dl><dt>In this code, four
+    table headers are grouped into three categories—name, contact, and
+    location—using  axis:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;td <em>axis="name"</em>&gt;Fred&lt;/td&gt;
+  &lt;td <em>axis="contact"</em>&gt;fred@megacorp.com&lt;/td&gt;
+  &lt;td <em>axis="contact"</em>&gt;123456&lt;/td&gt;
+  &lt;td <em>axis="location"</em>&gt;1/A&lt;/td&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-bgcolor"><dl><dt>A different
+     <code>bgcolor</code> is applied to several  td
+    element in this  table:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;td <em>bgcolor="#99FFFF"</em>&gt;Jane&lt;/td&gt;
+  &lt;td <em>bgcolor="#FFFF99"</em>&gt;jane@megacorp.com&lt;/td&gt;
+  &lt;td <em>bgcolor="#99FFFF"</em>&gt;777444&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td <em>bgcolor="#FFFF99"</em>&gt;Alison&lt;/td&gt;
+  &lt;td <em>bgcolor="#99FFFF"</em>&gt;alison@megacorp&lt;/td&gt;
+  &lt;td <em>bgcolor="#FFFF99"</em>&gt;888652&lt;/td&gt;
+&lt;/tr&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-td-char"><dl><dt>In this example the second cell is
+    aligned to the  % character:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;td&gt;Young Saver&lt;/td&gt;
+  &lt;td align="char" <em>char="%"</em>&gt;From 1.6%&lt;/td&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-charoff"><dl><dt>In this example, the contents of the
+    cell are aligned two characters to the right of the  %
+    character:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;td&gt;Young Saver&lt;/td&gt;
+  &lt;td align="char" char="%" <em>charoff="2"</em>&gt;From 1.6%&lt;/td&gt;
+&lt;/tr&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-td-colspan"><dl><dt>This example shows an extract from a
+    calendar, with a person’s availability apparently spanning the whole day:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;th scope="row"&gt;Tue&lt;/th&gt;
+  &lt;td <em>colspan="4"</em>&gt;Free&lt;/td&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-headers"><dl><dt>The following example
+    shows how  <code>headers</code> associates the header cells with
+    the body cell contents:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" id="hdr_work"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="hdr_n"&gt;Name&lt;/th&gt;
+    &lt;th id="hdr_e"&gt;Email&lt;/th&gt;
+    &lt;th id="hdr_p"&gt;Phone&lt;/th&gt;
+    &lt;th id="hdr_f"&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td <em>headers="hdr_work hdr_n"</em>&gt;Fred&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_e"</em>&gt;fred@megacorp.com&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_p"</em>&gt;123456&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_f"</em>&gt;1/A&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-nowrap"><dl><dt>Here, the  td
+    contents are set not to wrap:</dt><dd><pre class="code">&lt;td <em>nowrap="nowrap"</em>&gt;+44 01793 001100&lt;/td&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-rowspan"><dl><dt>Here’s an extract from a calendar,
+    with a person’s availability showing that half the day is free, and half
+    is busy:</dt><dd><pre class="code">  &lt;tr&gt;
+    &lt;th&gt;Evening&lt;/th&gt;
+    &lt;td <em>rowspan="2"</em>&gt;Free&lt;/td&gt;
+    &lt;td <em>rowspan="2"</em>&gt;Busy&lt;/td&gt;
+  &lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-scope"><dl><dt>The information “Acme
+    Industries” is associated with all the cells in its row:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;th&gt;Company&lt;/th&gt;
+  &lt;th&gt;Employees&lt;/th&gt;
+  &lt;th&gt;Founded&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td <em>scope="row"</em>&gt;Acme Industries&lt;/td&gt;
+  &lt;td&gt;1000&lt;/td&gt;
+  &lt;td&gt;1978&lt;/td&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-td-valign"><dl><dt>The  <code>valign</code> is
+    set to  bottom for each of these  td
+    elements:</dt><dd><pre class="code">  &lt;tr&gt;
+    &lt;td <em>valign="bottom"</em>&gt;Alison&lt;/td&gt;
+    &lt;td <em>valign="bottom"</em>&gt;alison@megacorp&lt;/td&gt;
+    &lt;td <em>valign="bottom"</em>&gt;888652&lt;/td&gt;
+  &lt;/tr&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-td-width"><dl><dt>Here, the
+     <code>width</code> attribute is set to
+     50%:</dt><dd><pre class="code"> &lt;tr&gt;
+   &lt;td <em>width="50%"</em>&gt;Smart&lt;/td&gt;
+   &lt;td <em>width="50%"</em>&gt;From 2%&lt;/td&gt;
+ &lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-textarea-accesskey"><dl><dt>The
+     <code>accesskey</code> for this group of controls is assigned to
+     d:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" <em>accesskey="d"</em>&gt;&lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-textarea-cols"><dl><dt>The  <code>cols</code>
+    attribute for this  textarea is set to
+     40 characters:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" accesskey="d" <em>cols="40"</em>&gt;&lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-textarea-disabled"><dl><dt>Here’s an example of the <code>disabled</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" <em>disabled="disabled"</em> name="perfectday"
+      accesskey="d" cols="40" rows="10"&gt;&lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-textarea-name"><dl><dt>Here’s an example of the <code>name</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" <em>name="perfectday"</em> accesskey="d"
+      cols="40" rows="10"&gt;&lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-textarea-readonly"><dl><dt>Here’s an example of the <code>readonly</code> attribute in action:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" <em>readonly="readonly"</em> name="perfectday"
+      accesskey="d" cols="40" rows="10"&gt;
+    Sitting by the beach, sipping a cocktail&lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-textarea-rows"><dl><dt>The  <code>rows</code>
+    attribute for this  textarea is set to
+     10:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" accesskey="d" cols="40" <em>rows="10"</em>&gt;
+  &lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us"/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-textarea-tabindex"><dl><dt>The  <code>tabindex</code>
+    is set for both form controls below:</dt><dd><pre class="code">&lt;form&gt;
+  &lt;label for="perfectday"&gt;Describe your perfect day:&lt;/label&gt;
+  &lt;textarea id="perfectday" <em>tabindex="1"</em> name="perfectday"
+      accesskey="d" cols="40" rows="10"&gt;
+    Sitting by the beach, sipping a cocktail&lt;/textarea&gt;
+  &lt;input type="submit" value="Tell us" <em>tabindex="2"</em>/&gt;
+&lt;/form&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-tfoot-align"><dl><dt>This  tfoot will
+    set all text inside the nested  td elements to the
+    right:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot <em>align="right"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Recommended for you: 'Young Saver'&lt;/td&gt;
+      &lt;td&gt;Interest from: 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tfoot-char"><dl><dt>This  align
+    attribute is set to match the position of the  %
+    character:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot align="char" <em>char="%"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Recommended for you: 'Young Saver'&lt;/td&gt;
+      &lt;td&gt;Interest from: 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tfoot-charoff"><dl><dt>Here, the character alignment offset
+    is set to two characters:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot align="char" char="%" <em>charoff="2"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Recommended for you: 'Young Saver'&lt;/td&gt;
+      &lt;td&gt;Interest from: 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tfoot-valign"><dl><dt>The  <code>valign</code>
+    attribute is set to  top on this narrow
+    table:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="200" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot <em>valign="top"</em>&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Recommended for you: 'Young Saver'&lt;/td&gt;
+      &lt;td&gt;Interest from: 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-th-abbr"><dl><dt>This table lists vehicle details
+    using the  <code>abbr</code> attribute to contain make, model,
+    and revision information:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th <em>abbr="Make"</em>&gt;Car manufacturer (make)&lt;/th&gt;
+    &lt;th <em>abbr="Model"</em>&gt;Vehicle model (name/spec)&lt;/th&gt;
+    &lt;th <em>abbr="Revised"</em>&gt;Date of last revision &lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Volkswagen&lt;/td&gt;
+    &lt;td&gt;Golf 2.8 GTi&lt;/td&gt;
+    &lt;td&gt;June 2007&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-th-align"><dl><dt>Here, default browser alignment of
+    the  th is overridden so the content is aligned to the
+     right:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;th <em>align="right"</em>&gt;Account Type&lt;/th&gt;
+  &lt;th <em>align="right"</em>&gt;Interest Rate&lt;/th&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-axis"><dl><dt>In this example, four
+    table headers are grouped into three categories—name, contact, and
+    location—using  axis:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th <em>axis="name"</em>&gt;Name&lt;/th&gt;
+    &lt;th <em>axis="contact"</em>&gt;Email&lt;/th&gt;
+    &lt;th <em>axis="contact"</em>&gt;Phone&lt;/th&gt;
+    &lt;th <em>axis="location"</em>&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Fred&lt;/td&gt;
+    &lt;td&gt;fred@megacorp.com&lt;/td&gt;
+    &lt;td&gt;123456&lt;/td&gt;
+    &lt;td&gt;1/A&lt;/td&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-bgcolor"><dl><dt>A different
+     <code>bgcolor</code> is applied to several  th
+    elements in this  table:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" <em>bgcolor="#CCFF66"</em>&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th <em>bgcolor="#FFbb66"</em>&gt;Name&lt;/th&gt;
+    &lt;th <em>bgcolor="#FFFF33"</em>&gt;Email&lt;/th&gt;
+    &lt;th <em>bgcolor="#FFbb66"</em>&gt;Phone&lt;/th&gt;
+    &lt;th <em>bgcolor="#FFFF33"</em>&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-char"><dl><dt>In this example, the second cell is
+    aligned with the  % character:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;th&gt;Account Type&lt;/th&gt;
+  &lt;th align="char" <em>char="%"</em>&gt;Interest Rate (%)&lt;/th&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-charoff"><dl><dt>In this example, the cell alignment
+    is offset ( charoff) two to the right of the
+     % character:</dt><dd><pre class="code">&lt;tr&gt;
+  &lt;th&gt;Account Type&lt;/th&gt;
+  &lt;th align="char" char="%" <em>charoff="2"</em>&gt;Interest Rate (%)&lt;/th&gt;
+&lt;/tr&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-colspan"><dl><dt>In this example, contact details
+    share a common header, “Work Contact Points,” which is spanned across four
+    columns:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th <em>colspan="4"</em>&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Name&lt;/td&gt;
+    &lt;td&gt;Email&lt;/td&gt;
+    &lt;td&gt;Phone&lt;/td&gt;
+    &lt;td&gt;Floor/Block&lt;/td&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-headers"><dl><dt>The example below associates the
+    cell contents using  <code>headers</code> with the appropriate
+    header cells:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" id="hdr_work"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="hdr_n"&gt;Name&lt;/th&gt;
+    &lt;th id="hdr_e"&gt;Email&lt;/th&gt;
+    &lt;th id="hdr_p"&gt;Phone&lt;/th&gt;
+    &lt;th id="hdr_f"&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td <em>headers="hdr_work hdr_n"</em>&gt;Fred&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_e"</em>&gt;fred@megacorp.com&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_p"</em>&gt;123456&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_f"</em>&gt;1/A&lt;/td&gt;
+  &lt;/tr
+  &lt;tr&gt;
+    &lt;td <em>headers="hdr_work hdr_n"</em>&gt;Bill&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_e"</em>&gt;bill@megacorp.com&lt;/td&gt;
+    &lt;td <em>headers="hdr_work hdr_p"</em>&gt;345678&lt;/td&gt;
+    &lt;th <em>headers="hdr_work hdr_f"</em>&gt;3/C&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-th-nowrap"><dl><dt>These  th contents
+    are set not to wrap:</dt><dd><pre class="code">&lt;th <em>nowrap="nowrap"</em>&gt;Car manufacturer (make)&lt;/th&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-rowspan"><dl><dt>Some of the employees in this
+    example work on the same floor of the building, so this information is
+    shared across the appropriate rows:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" scope="col"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+  &lt;tr&gt;
+    &lt;td&gt;Bill&lt;/td&gt;
+    &lt;td&gt;bill@megacorp.com&lt;/td&gt;
+    &lt;td&gt;345678&lt;/td&gt;
+    &lt;th <em>rowspan="3"</em>&gt;3/C&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane&lt;/td&gt;
+    &lt;td&gt;jane@megacorp.com&lt;/td&gt;
+    &lt;td&gt;777444&lt;/td&gt;
+    <htmlremark>missing cell taken up by th with rowspan</htmlremark>
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alison&lt;/td&gt;
+    &lt;td&gt;alison@megacorp&lt;/td&gt;
+    &lt;td&gt;888652&lt;/td&gt;
+    <htmlremark>missing cell taken up by th with rowspan</htmlremark>
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-scope"><dl><dt>This
+     <code>scope</code> attribute of  col
+    identifies the cells as part of the header cell’s
+     colgroup:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th colspan="4" <em>scope="colgroup"</em>&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th <em>scope="col"</em>&gt;Name&lt;/th&gt;
+    &lt;th <em>scope="col"</em>&gt;Email&lt;/th&gt;
+    &lt;th <em>scope="col"</em>&gt;Phone&lt;/th&gt;
+    &lt;th <em>scope="col"</em>&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Fred&lt;/td&gt;
+    &lt;td&gt;fred@megacorp.com&lt;/td&gt;
+    &lt;td&gt;123456&lt;/td&gt;
+    &lt;td&gt;1/A&lt;/td&gt;
+  &lt;/tr
+  &lt;tr&gt;
+    &lt;td&gt;Bill&lt;/td&gt;
+    &lt;td&gt;bill@megacorp.com&lt;/td&gt;
+    &lt;td&gt;345678&lt;/td&gt;
+    &lt;th&gt;3/C&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-valign"><dl><dt>The  <code>valign</code> is
+    set to  bottom for each of these  th
+    elements:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="200" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th <em>valign="bottom"</em>&gt;Account Type (Name titles as per
+          Spring 2006 range)&lt;/th&gt;
+      &lt;th <em>valign="bottom"</em>&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-th-width"><dl><dt>This
+     <code>width</code> attribute is set to
+     50%:</dt><dd><pre class="code">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th <em>width="50%"</em>&gt;Account Type&lt;/th&gt;
+    &lt;th <em>width="50%"</em>&gt;Interest Rate&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Smart&lt;/td&gt;
+    &lt;td&gt;From 2%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Young Saver&lt;/td&gt;
+    &lt;td&gt;From 1.6%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-thead-align"><dl><dt>This
+     thead content is set to <code>align</code>
+     left:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead <em>align="left"</em>&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-thead-char"><dl><dt>Here, the character to
+    which cell contents will be aligned is defined as
+     %:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead align="char" <em>char="%"</em>&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-thead-charoff"><dl><dt>Here, the character alignment is
+    offset by two characters:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead align="char" char="%" <em>charoff="2"</em>&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-thead-valign"><dl><dt>The
+     <code>valign</code> is set to  bottom on
+    this narrow table:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="200" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead <em>valign="bottom"</em>&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type (Name titles as per Spring 2006 range)&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-tr-align"><dl><dt>The  th elements’
+    default alignment ( center) is overridden at the
+     tr level, to become
+     left:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr <em>align="left"</em>&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tr-bgcolor"><dl><dt>A different
+     <code>bgcolor</code> is applied to the first
+     tr element in this
+     table:</dt><dd><pre class="code">&lt;table border="1"&gt;
+  &lt;tr <em>bgcolor="#CCFF66"</em>&gt;
+    &lt;th colspan="4"&gt;Work Contact Points&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Phone&lt;/th&gt;
+    &lt;th&gt;Floor/Block&lt;/th&gt;
+  &lt;/tr&gt;
+  ⋮
+&lt;/table&gt;</pre></dd></dl></div><div id="cdb-eg-attributes-tr-char"><dl><dt>In the following example, the rows
+    are aligned to the  % character:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead align="char"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr align="char" <em>char="%"</em>&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align="char" <em>char="%"</em>&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tr-charoff"><dl><dt>Here, the character alignment is
+    offset by two characters from the  %:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="400" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Account Type&lt;/th&gt;
+      &lt;th&gt;Interest Rate (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr align="char" char="%" <em>charoff="2"</em>&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align="char" char="%" <em>charoff="2"</em>&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-tr-valign"><dl><dt>The  <code>valign</code> is
+    set to  bottom for the first row of this narrow
+    table:</dt><dd><pre class="code">&lt;table summary="Interest Rates" width="200" border="1"&gt;
+  &lt;caption&gt;Interest Rates&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr <em>valign="bottom"</em>&gt;
+      &lt;th&gt;Account Type (Name titles as per Spring 2006 range)&lt;/th&gt;
+      &lt;th&gt;Interest Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Smart&lt;/td&gt;
+      &lt;td&gt;From 2%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Young Saver&lt;/td&gt;
+      &lt;td&gt;From 1.6%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-ul-compact"><dl><dt>Here’s
+     <code>compact</code> applied to the navigation block we saw
+    earlier:</dt><dd><pre class="code">&lt;ul <em>compact="compact"</em>&gt;
+  &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/about/"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/portfolio/"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/clients/"&gt;Clients&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/contact/"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre></dd></dl></div><div id="cdb-eg-attributes-ul-type"><dl><dt>This example shows
+     <code>type</code> applied to the navigation block we saw
+    earlier:</dt><dd><pre class="code">&lt;ul <em>type="circle"</em>&gt;
+  &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/about/"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/portfolio/"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/clients/"&gt;Clients&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/contact/"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre></dd></dl></div></body></html>

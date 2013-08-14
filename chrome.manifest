@@ -1,0 +1,5 @@
+overlay		chrome://firebug/content/firebugOverlay.xul		chrome://sitepointreference/content/codeburner.xul
+
+content		sitepointreference		chrome/content/			xpcnativewrappers=no
+
+locale  	sitepointreference		en-US					chrome/locale/en-US/

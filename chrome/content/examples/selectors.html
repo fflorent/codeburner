@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>	<title>Code examples for CSS selectors</title>	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<meta name="description" content="This page contains code examples for CSS selectors, indexed by name or selector" />	<meta name="generated" content="20090807" />	<meta name="edited" content="20101029" />	<meta name="library-version" content="2.0" />	<meta name="copyright" content="Copyright (c) 2010 SitePoint Pty Ltd." />	<link rel="license" href="http://tools.sitepoint.com/codeburner" />	<link rel="source" href="http://reference.sitepoint.com/css" />	<link rel="stylesheet" type="text/css" href="chrome://sitepointreference/content/code.css" />	<script type="text/javascript" src="chrome://sitepointreference/content/code.js"></script></head><body class="css selectors"><div id="cdb-eg-selectors-adjacentsiblingselector"><dl><dt>This selector matches all
+     p elements that appear immediately after
+     h2 elements:</dt><dd><pre class="code">h2 + p {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-attributeselector"><dl><dt>This selector matches all
+     input elements with a  type
+    attribute that’s equal to  submit (in other words,
+    submit buttons):</dt><dd><pre class="code">input[type="submit"] {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-childselector"><dl><dt>Here’s an example of the child
+    selector at work:</dt><dd><pre class="code">ul &gt; li {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-classselector"><dl><dt>The following selector will match all
+     p elements with a  class
+    attribute that contains the value
+     intro:</dt><dd><pre class="code">p.intro {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-css3attributeselectors"><dl><dt>This example will match
+     a elements with an  href
+    attribute that contains the string
+     example.com:</dt><dd><pre class="code">a[href*="example.com"] {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-descendantselector"><dl><dt>Take a look at this example of the
+    descendant selector in action:</dt><dd><pre class="code">ul li {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-elementtypeselector"><dl><dt>Consider this example
+    selector:</dt><dd><pre class="code">ul {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-generalsiblingselector"><dl><dt>This selector matches all
+     p elements that are siblings to  h2
+    elements:</dt><dd><pre class="code">h2 ~ p {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-idselector"><dl><dt>This example selector matches any
+    element whose  id attribute value is equal to
+     breadcrumbs:</dt><dd><pre class="code">#breadcrumbs {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-active"><dl><dt>This rule will set the font color of
+    an active HTML link to  #cccccc:</dt><dd><pre class="code">a:active {
+  color: #cccccc;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-checked"><dl><dt>The following rule will apply to the
+    element that has an  id of
+     confirm (for example, a checkbox) when that element
+    has been checked:</dt><dd><pre class="code">#confirm:checked {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-disabled"><dl><dt>The following rule will apply to all
+     input elements that are currently
+    disabled:</dt><dd><pre class="code">input:disabled {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-empty"><dl><dt>The selector
+     p:empty will match the first paragraph, but not
+    the second or third, in this example:</dt><dd><pre class="code">&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Hello, World!&lt;/p&gt;</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-enabled"><dl><dt>The following example will apply the
+    rule to all  input elements that are currently
+    enabled:</dt><dd><pre class="code">input:enabled {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-firstchild"><dl><dt>This example selector matches the
+    first list item in an  ol or  ul
+    element:</dt><dd><pre class="code">li:first-child {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-firstoftype"><dl><dt>This selector matches the first
+     p element that’s a child of a  div
+    element:</dt><dd><pre class="code">div &gt; p:first-of-type {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-focus"><dl><dt>This rule applies a border around any
+    text  textarea element that has focus:</dt><dd><pre class="code">textarea:focus {
+  border: 2px solid blue;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-hover"><dl><dt>This rule will apply a border to any
+     img element over which the cursor is
+    hovered:</dt><dd><pre class="code">img:hover {
+  border: 5px solid #F2F2F2;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-lang"><dl><dt>The following rule set will be
+    applied to elements whose language specification is
+     fr (French),  fr-be
+    (French/Belgium),  fr-ca (French/Canada), and so
+    on:</dt><dd><pre class="code">:lang(fr) {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-lastchild"><dl><dt>This selector will match any
+    paragraph that’s the last child element of its parent
+    element:</dt><dd><pre class="code">p:last-child {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-lastoftype"><dl><dt>This selector matches the last
+     p element that’s a child of a  div
+    element:</dt><dd><pre class="code">div &gt; p:last-of-type {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-link"><dl><dt>This example will set the font color
+    of all unvisited HTML links to  #cccccc:</dt><dd><pre class="code">a:link {
+  color: #cccccc;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-not"><dl><dt> The following selector matches all
+    elements except  table elements:</dt><dd><pre class="code">:not(table) {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-nthchild"><dl><dt>This example selector will match
+    odd-numbered table rows:</dt><dd><pre class="code">tr:nth-child(odd) {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-nthlastchild"><dl><dt>This example selector will match the
+    last row of any table:</dt><dd><pre class="code">tr:nth-last-child(1) {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-nthlastoftype"><dl><dt>The following example selector will
+    match the last three image elements that are children of the element whose
+     id attribute value matches
+     &quot;gallery&quot;:</dt><dd><pre class="code">#gallery &gt; img:nth-last-of-type(-n+3) {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-nthoftype"><dl><dt>The following example selector
+    matches the first child paragraph in a  div
+    element:</dt><dd><pre class="code">div &gt; p:nth-of-type(1) {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-onlychild"><dl><dt>The following selector will match a
+    list item element if it’s the only list item in its parent
+     ol or  ul element:</dt><dd><pre class="code">li:only-child {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-onlyoftype"><dl><dt>This selector will match an
+     img element that’s the only child
+     img element of its parent element:</dt><dd><pre class="code">img:only-of-type {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-root"><dl><dt>In an HTML document, this selector
+    will match the  html element:</dt><dd><pre class="code">:root {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-target"><dl><dt>For example, if the URI was
+     http://www.example.com/index.html#section2, the following
+    selector would match the element that had an  id
+    attribute of  "section2":</dt><dd><pre class="code">:target {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoclass-visited"><dl><dt>This rule will set the font color of
+    all visited HTML links to  #cccccc:</dt><dd><pre class="code">a:visited {
+  color: #cccccc;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoelement-after"><dl><dt>This example will render the text
+    “cm” in the color  #cccccc, after a
+     span element with a  class value
+    of  centimeters:</dt><dd><pre class="code">span.centimeters:after {
+  content: "cm";
+  color: #cccccc;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoelement-before"><dl><dt>In this example, the text “You are
+    here:” is rendered before the document element with the
+     id value of  breadcrumbs, and
+    given a right margin value of  0.5em:</dt><dd><pre class="code">#breadcrumbs:before {
+  content: "You are here:";
+  margin-right: 0.5em;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoelement-firstletter"><dl><dt>The following example selector will
+    match the first letter of a  p element:</dt><dd><pre class="code">p:first-letter {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoelement-firstline"><dl><dt>The following selector will match the
+    first line of a  p element:</dt><dd><pre class="code">p:first-line {
+  text-transform: uppercase;
+}</pre></dd></dl></div><div id="cdb-eg-selectors-pseudoelement-selection"><dl><dt>This selector will match any
+    user-selected text within a  textarea
+    element:</dt><dd><pre class="code">textarea::selection {
+  ⋮ declarations
+}</pre></dd></dl></div><div id="cdb-eg-selectors-universalselector"><dl><dt>This rule set will be applied to
+    every element in a document:</dt><dd><pre class="code">* {
+  margin: 0;
+  padding: 0;
+}</pre></dd></dl></div></body></html>

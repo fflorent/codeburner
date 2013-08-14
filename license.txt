@@ -1,0 +1,24 @@
+CodeBurner for Firebug -> Copyright (c) 2010 SitePoint Pty Ltd
+----------------------------------------------------------------------------------------------------
+
+Licensed under a modified Creative Commons Attribution-Noncommercial-Share Alike 3.0
+
+----------------------------------------------------------------------------------------------------
+
+You are free to copy, adapt, distribute and transmit the work, under the following conditions:
+
+Attribution. 
+	You must attribute the work in the manner specified by the author or licensor 
+	(but not in any way that suggests that they endorse you or your use of the work). 
+	
+Commercial use.
+    You may use this work for commercial purposes. 
+
+Noncommercial redistribution.
+    You may not redistribute this work for commercial purposes. For the purposes of this license, 
+    "redistribute" means to make copies and give them to other people; it does not mean 
+    making copies for your own private use, including local copies created during installation.
+	
+Share Alike. 
+	If you alter, transform, or build upon this work, you may distribute the resulting 
+	work only under the same or similar license to this one.

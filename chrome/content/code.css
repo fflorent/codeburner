@@ -1,0 +1,150 @@
+/* SPREF1.6 :: CodeBurner for Firebug v1.6
+//******************************************************************************
+// Copyright (c) 2010 SitePoint Pty Ltd. -- http://www.sitepoint.com/
+// Written by brothercake -- http://www.brothercake.com/
+//******************************************************************************
+// This contains rules for the page inside the code example iframe
+//*****************************************************************************/
+
+
+
+
+
+/* core resets */
+*
+{
+	margin:0;
+	padding:0;
+}
+
+html, body
+{
+	background:#eee;
+	color:#000;
+}
+
+body
+{
+	font-size:0.8em;
+	display:table;
+	min-width:100%;
+}
+
+
+
+
+/* only show the target block */
+body > div
+{
+	display:none;
+}
+
+body > div:target
+{
+	display:block;
+}
+
+
+
+/* code example / caption group */
+dl > dt
+{
+	margin:0;
+	padding:3px 4px 4px 4px;
+	border-bottom:1px solid #bbb;
+	background:#ffd;
+	color:#222;
+	font:normal normal normal 0.88em/1.1 arial, sans-serif;
+}
+
+dl > dt > code
+{
+	font:inherit;
+	font-weight:bold;
+}
+body.elements dl > dt > code
+{
+	font-variant:small-caps;
+}
+
+dl > dd 
+{
+	background:#eee;
+}
+
+dl > dd > pre
+{
+	padding:7px 5px;
+	-moz-box-sizing:border-box;
+	font:normal normal normal 0.88em monaco, monospace;
+	background:#eee;
+	background:transparent;
+	color:#444;
+}
+
+dl > dd > pre:focus
+{
+	outline:none;
+}
+
+dl > dd > pre em
+{
+	font-style:normal;
+	font-weight:bold !important;
+}
+
+
+
+
+
+
+/* syntax highlighting */
+.codeDeclarations 
+{ 
+	color:#808080;
+}
+.codeComment, .codeComment *
+{ 
+	color:#808080 !important;
+}
+.codeBrace, * .codeBrace
+{
+	color:#404040 !important;
+}
+.codeDoctype
+{
+	color:#907090;
+}
+.codeElement
+{
+	color:#000090;
+}
+.codeAttr
+{
+	color:#006000;
+}
+.codeVal, .codeVal *
+{
+	color:#900000;
+}
+.codeProperty
+{
+	color:#900000;
+}
+.codeValue, .codeValue *
+{
+	color:#006000;
+}
+.codeSelector
+{
+	color:#007070;
+}
+.codePseudo
+{
+	color:#600090;
+}
+.codeAtrule
+{
+	color:#707000;
+}
+

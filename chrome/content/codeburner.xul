@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<!-- master reference dictionary -->
+	<script src="chrome://sitepointreference/content/dictionaries/dictionary.js" type="application/x-javascript"/>
+	
+	<!-- application scripts -->
+	<script src="chrome://sitepointreference/content/codeburner-BUG.js" type="application/x-javascript"/>
+	<script src="chrome://sitepointreference/content/panels.js" type="application/x-javascript"/>
+
+	<!-- firebug toolbar insert and language data -->
+    <toolbar id="fbToolbar" align="center">
+ 		<stringbundleset>
+			<stringbundle id="spref-langbundle" src="chrome://sitepointreference/locale/lang.properties"/>		
+			<stringbundle id="spref-eglang-elements" src="chrome://sitepointreference/locale/elements.properties"/>		
+		</stringbundleset>
+       <hbox id="fbToolbarInner" insertbefore="fbDetachButton" flex="1" align="center">
+            <hbox id="fbReferenceButtons" insertafter="fbNetButtons">
+				<toolbarseparator/>
+			</hbox>
+		</hbox>
+    </toolbar>
+
+</overlay>
