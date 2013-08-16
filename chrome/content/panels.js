@@ -88,6 +88,7 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 							.getElementsByTagName('a').item(0).getAttribute('href');
 						if(href) //just for safety
 						{
+							// Open the link in a new tab using the Firebug API.
 							FBL.openNewTab(href);
 						}
 					}
@@ -121,7 +122,8 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 										Firebug.CodeBurner.queryTracker,
 										'/demo' + Firebug.CodeBurner.queryTracker
 										);
-									FBL.openNewTab(sphref);
+									// Open the link in a new tab using the Firebug API.
+									FBL.openNewTab(href);
 								}
 							}
 						}

@@ -661,7 +661,10 @@ FBL.ns(function() { with (FBL) {
 							var href = target.getAttribute('href');
 							if(href != null && !/actionlink/.test(target.className))
 							{
+								// xxxFlorent: First prevent the event to trigger the default behaviour
+								// so the page won't be open in the panel in any case.
 								e.preventDefault();
+								// Open the link in a new tab using the Firebug API.
 								FBL.openNewTab(href);
 							}
 						}, false);
@@ -723,7 +726,10 @@ FBL.ns(function() { with (FBL) {
 						var href = e.target.getAttribute("href");
 						if(href)
 						{
+							// xxxFlorent: First prevent the event to trigger the default behaviour
+							// so the page won't be open in the panel in any case.
 							e.preventDefault();
+							// Open the link in a new tab using the Firebug API.
 							FBL.openNewTab(href);
 						}
 					}, false);
@@ -824,7 +830,10 @@ FBL.ns(function() { with (FBL) {
 							var href = target.getAttribute('href');
 							if(href && target.className && /morelink/.test(target.className))
 							{
+								// xxxFlorent: First prevent the event to trigger the default behaviour
+								// so the page won't be open in the panel in any case.
 								e.preventDefault();
+								// Open the link in a new tab using the Firebug API.
 								FBL.openNewTab(href);
 								return false;
 							}
