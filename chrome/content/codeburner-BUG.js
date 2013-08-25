@@ -874,7 +874,7 @@ FBL.ns(function() { with (FBL) {
 						{
 							//populate the example panel with that data
 							var args = htmlpanel.egselectiondata;
-							this.populateExamplePanel(args[0], args[1], args[2], args[3]);
+							this.populateExamplePanel.apply(this, args.slice(0, 4));
 						}
 
 						//otherwise, if we have a selection in the HTML panel
@@ -2332,7 +2332,7 @@ FBL.ns(function() { with (FBL) {
 			{
 				// xxxFlorent: populateExamplePanel([args[0], args[1], args[2], args[3]]); 
 				// with populateExamplePanel.apply(null, args.slice(0, 4));
-				this.populateExamplePanel.apply(null, args.slice(0, 4));
+				this.populateExamplePanel.apply(this, args.slice(0, 4));
 			}
 
 			//otherwise just open the examples panel
