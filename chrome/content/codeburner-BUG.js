@@ -454,6 +454,7 @@ FBL.ns(function() { with (FBL) {
 		initialize: function()
 		{
 			//if the version number dependency is met
+			// xxxFlorent: isFirebugVersionOk
 			if(this.isFirebugVersionOk())
 			{
 				//platform-specific stylesheets don't seem to be working in this context
@@ -501,8 +502,14 @@ FBL.ns(function() { with (FBL) {
 		},
 
 
+		// check whether the Firebug version is compatible with CodeBurner
+		// xxxFlorent
 		isFirebugVersionOk: function()
 		{
+			// xxxFlorent: do not check with parseFloat(). parseFloat makes this assertion false:
+			// 	parseFloat("1.12") >= parseFloat("1.6")
+			// Firebug provides FBL.checkFirebugVersion(someVersion) that returns a positive integer if 
+			// the current version of Firebug is more recent than someVersion
 			return FBL.checkFirebugVersion(Firebug.CodeBurner['firebug-version']) >= 0;
 		},
 
@@ -525,8 +532,10 @@ FBL.ns(function() { with (FBL) {
 		showPanel: function(browser, panel)
 		{
 			//if the version number dependency is met
+			// xxxFlorent: isFirebugVersionOk
 			if(this.isFirebugVersionOk())
 			{
+				// xxxFlorent: panel may be null. In such a case, immediately return.
 				if (!panel)
 					return;
 				//if this is the stylesheet or reference panel
@@ -585,6 +594,7 @@ FBL.ns(function() { with (FBL) {
 			//create a global reference to our main reference panel
 			//we have to create it every time in order for it to work
 			//when multiple instances are open (in different tabs)
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			this.panel = Firebug.currentContext.getPanel(this.panelnames['reference']);
 
 			//if this is our reference panel ("Reference" tab)
@@ -600,6 +610,7 @@ FBL.ns(function() { with (FBL) {
 				panel.panelNode.className = panel.panelNode.className.replace(/ narrow/g, '');
 
 				//if the version number dependency is met
+				// xxxFlorent: isFirebugVersionOk
 				if(this.isFirebugVersionOk())
 				{
 					//if our panel has never been opened before,
@@ -660,6 +671,7 @@ FBL.ns(function() { with (FBL) {
 								// so the page won't be open in the panel in any case.
 								e.preventDefault();
 								// Open the link in a new tab using the Firebug API.
+								// xxxFlorent: Note: $('content').addTab(href, {}) throws an exception because $('content') is null
 								FBL.openNewTab(href);
 							}
 						}, false);
@@ -673,6 +685,7 @@ FBL.ns(function() { with (FBL) {
 					if(typeof this.noautosearch == 'undefined')
 					{
 						//get a reference to the html panel
+						// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 						var htmlpanel = Firebug.currentContext.getPanel('html');
 
 						//if we have a selection in that panel
@@ -725,6 +738,7 @@ FBL.ns(function() { with (FBL) {
 							// so the page won't be open in the panel in any case.
 							e.preventDefault();
 							// Open the link in a new tab using the Firebug API.
+							// xxxFlorent: Note: $('content').addTab(href, {}) throws an exception because $('content') is null
 							FBL.openNewTab(href);
 						}
 					}, false);
@@ -734,6 +748,7 @@ FBL.ns(function() { with (FBL) {
 			//or if it's the HTML panel ("HTML" tab) or the stylesheet panel ("CSS" tab)
 			//and if the version number dependency is met
 			else if((panel.name == 'html' || panel.name == 'stylesheet')
+				// xxxFlorent: isFirebugVersionOk
 				&& (this.isFirebugVersionOk()))
 			{
 				//get a reference to the context menu, if not already defined
@@ -765,6 +780,7 @@ FBL.ns(function() { with (FBL) {
 					setTimeout(function()
 					{
 						Firebug.CodeBurner.showSidePanel(browser,
+							// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 							Firebug.currentContext.getPanel(
 								Firebug.CodeBurner.panelnames['example-' + panel.name]));
 					}, 100);
@@ -785,8 +801,10 @@ FBL.ns(function() { with (FBL) {
 		showSidePanel: function(browser, panel)
 		{
 			//if the version number dependency is met
+			// xxxFlorent: isFirebugVersionOk
 			if(this.isFirebugVersionOk())
 			{
+				// xxxFlorent: panel may be null. In such a case, immediately return.
 				if (!panel)
 					return;
 				//clear any running code example load timer
@@ -829,6 +847,7 @@ FBL.ns(function() { with (FBL) {
 								// so the page won't be open in the panel in any case.
 								e.preventDefault();
 								// Open the link in a new tab using the Firebug API.
+								// xxxFlorent: Note: $('content').addTab(href, {}) throws an exception because $('content') is null
 								FBL.openNewTab(href);
 								return false;
 							}
@@ -847,6 +866,7 @@ FBL.ns(function() { with (FBL) {
 					if(panel.name == this.panelnames['example-html'])
 					{
 						//get a reference to the master panel
+						// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 						var htmlpanel = Firebug.currentContext.getPanel('html');
 
 						//if we have selection data saved
@@ -878,6 +898,7 @@ FBL.ns(function() { with (FBL) {
 					else if(panel.name == this.panelnames['example-stylesheet'])
 					{
 						//get a reference to the master panel
+						// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 						var csspanel = Firebug.currentContext.getPanel('stylesheet');
 
 						//if we have selection data saved
@@ -893,6 +914,7 @@ FBL.ns(function() { with (FBL) {
 					else if(panel.name == this.panelnames['example-reference'])
 					{
 						//get a reference to the master panel
+						// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 						var refpanel = Firebug.currentContext.getPanel('reference');
 
 						//if we have selection data saved
@@ -911,6 +933,7 @@ FBL.ns(function() { with (FBL) {
 		reattachContext: function(browser, context)
 		{
 			//if the version number dependency is met
+			// xxxFlorent: isFirebugVersionOk
 			if(this.isFirebugVersionOk())
 			{
 				//get a reference to the external window and its document
@@ -1031,6 +1054,7 @@ FBL.ns(function() { with (FBL) {
 		collapseSidePanelsDeck: function()
 		{
 			var tool = Firebug.CodeBurner;
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			if(Firebug.currentContext.getPanel('stylesheet').visible == true
 				|| Firebug.currentContext.getPanel(tool.panelnames['reference']).visible == true)
 			{
@@ -1085,16 +1109,19 @@ FBL.ns(function() { with (FBL) {
 		getVisiblePanel: function()
 		{
 			//** speculative fix for reported console2 bug
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			if(!Firebug.currentContext) { return null; }
 
 			var panelnames = ['html', 'stylesheet', this.panelnames['reference']],
 				currentPanel = { 'panel' : null, 'egpanel' : null };
 			for(var i=0; i<panelnames.length; i++)
 			{
+				// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 				var panel = Firebug.currentContext.getPanel(panelnames[i]);
 				if(panel.visible == true)
 				{
 					currentPanel.panel = panel;
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					currentPanel.egpanel = Firebug.currentContext.getPanel(this.panelnames['example-' + panel.name]);
 				}
 			}
@@ -1109,6 +1136,7 @@ FBL.ns(function() { with (FBL) {
 			//so check that and return a null panel if so
 			//this only appears to happen when firebug isn't being used, 
 			//so *I think* it's okay to do this without loss of practical functionality
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			if(!Firebug.currentContext) { return null; }
 			
 			var tool = Firebug.CodeBurner;
@@ -1120,6 +1148,7 @@ FBL.ns(function() { with (FBL) {
 			var panelnames = ['html','css','stylesheet'];
 			for(var i=0; i<panelnames.length; i++)
 			{
+				// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 				var panel = Firebug.currentContext.getPanel(panelnames[i]);
 				if(panel.panelNode == node)
 				{
@@ -1271,6 +1300,7 @@ FBL.ns(function() { with (FBL) {
 
 			//first we have to create a new tab context, so we have access to the getPanelType method...
 			//[we can't just use an existing context reference, that doesn't give us method access]
+			// xxxFlorent: Note: browser.chrome doesn't exist. Use Firebug.chrome instead.
 			var context = new Firebug.TabContext(window, browser, Firebug.chrome, false);
 
 			//so that we can get a reference to the CSSElementPanel object...
@@ -1455,6 +1485,7 @@ FBL.ns(function() { with (FBL) {
 			var atruletypes = [], 
 			add = function(artype)
 			{
+				// xxxFlorent: Note: `CodeBurner` is undefined. Use Firebug.CodeBurner instead
 				if(!Firebug.CodeBurner.arrayContains(atruletypes, artype))
 				{ 
 					atruletypes.push(artype); 
@@ -1903,10 +1934,12 @@ FBL.ns(function() { with (FBL) {
 			var tool = Firebug.CodeBurner;
 
 			//get the html panel and a browser reference
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			var htmlpanel = Firebug.currentContext.getPanel('html');
 			var browser = htmlpanel.context.browser
 
 			//if the example-html panel is open,
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 			{
 				//delete the selection data property, so that if you switch away and back
@@ -1986,6 +2019,7 @@ FBL.ns(function() { with (FBL) {
 			node = node.toLowerCase().replace(/^([a-z1-6]+).*$/, '$1');
 
 			//get a browser reference from the example panel
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			var browser = Firebug.currentContext.getPanel(tool.panelnames['example-html']).context.browser;
 
 			//if we dont have the elements area dictonary, load it now
@@ -1998,11 +2032,13 @@ FBL.ns(function() { with (FBL) {
 				&& typeof CodeBurnerDictionary['elements'][node] != 'undefined')
 			{
 				//if the example-html panel is open,
+				// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 				if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 				{
 					//delete the selection data property, so that if you switch away and back
 					//to this tab, the last selection is still there (but we don't delete it when
 					//viewing that example, for the same reason)
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					delete Firebug.currentContext.getPanel('html').egselectiondata;
 
 					//now populate the panel with this selection
@@ -2011,6 +2047,7 @@ FBL.ns(function() { with (FBL) {
 				//otherwise just save this information in lieu of its next opening
 				else
 				{
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					Firebug.currentContext.getPanel('html').egselectiondata = [browser, node, 'elements', null];
 				}
 			}
@@ -2067,11 +2104,13 @@ FBL.ns(function() { with (FBL) {
 			if(node != null && area != null)
 			{
 				//if the example-html panel is open,
+				// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 				if(Firebug.currentContext.getPanel(this.panelnames['example-html']).visible == true)
 				{
 					//delete the selection data property, so that if you switch away and back
 					//to this tab, the last selection is still there (but we don't delete it when
 					//viewing that example, for the same reason)
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					delete Firebug.currentContext.getPanel('html').egselectiondata;
 
 					//now populate the panel with this selection
@@ -2084,6 +2123,7 @@ FBL.ns(function() { with (FBL) {
 				//it feels safer to save this data to a stable panel
 				else
 				{
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					Firebug.currentContext.getPanel('html').egselectiondata = [browser, node, area, owner];
 				}
 			}
@@ -2225,11 +2265,13 @@ FBL.ns(function() { with (FBL) {
 			if(egdata.length > 0)
 			{
 				//if the example-stylesheet panel is open,
+				// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 				if(Firebug.currentContext.getPanel(this.panelnames['example-stylesheet']).visible == true)
 				{
 					//delete the selection data property, so that if you switch away and back
 					//to this tab, the last selection is still there (but we don't delete it when
 					//viewing that example, for the same reason)
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					delete Firebug.currentContext.getPanel('stylesheet').egselectiondata;
 
 					//now populate the panel with the egdata
@@ -2238,6 +2280,7 @@ FBL.ns(function() { with (FBL) {
 				//otherwise just save this information in lieu of its next opening
 				else
 				{
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					Firebug.currentContext.getPanel('stylesheet').egselectiondata = [browser, egdata[0], egdata[1], null];
 				}
 			}
@@ -2263,6 +2306,8 @@ FBL.ns(function() { with (FBL) {
 			}
 
 			//get a browser reference and save it to args[0]
+			// xxxFlorent: old: document.getElementById('content').selectedBrowser;
+			// xxxFlorent: use Firebug.currentContext.browser; instead.
 			args[0] = Firebug.currentContext.browser;
 
 			//show and uncollapse the side panels deck
@@ -2271,17 +2316,22 @@ FBL.ns(function() { with (FBL) {
 			this.splitter.setAttribute('collapsed', 'false');
 
 			//get a reference to the example pane
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			var egpanel = Firebug.currentContext.getPanel(this.panelnames['example-reference'])
 
 			//save this info to the example selection args array
 			//which will be used when the panel is re-opened
 			//without a change in reference panel selection
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
+			// xxxFlorent: replaced ... = [args[0], args[1], args[2], args[3]]; with ... = args.slice(0, 4);
 			Firebug.currentContext.getPanel(this.panelnames['reference']).egselectionargs = args.slice(0, 4);
 
 			//if the example panel is already open
 			//populate it with this information
 			if(egpanel.visible == true)
 			{
+				// xxxFlorent: populateExamplePanel([args[0], args[1], args[2], args[3]]); 
+				// with populateExamplePanel.apply(null, args.slice(0, 4));
 				this.populateExamplePanel.apply(null, args.slice(0, 4));
 			}
 
@@ -2391,6 +2441,7 @@ FBL.ns(function() { with (FBL) {
 				&& typeof CodeBurnerDictionary['elements'][node] != 'undefined')
 			{
 				//get a browser reference from the example panel
+				// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 				var browser = Firebug.currentContext.getPanel(tool.panelnames['example-html']).context.browser;
 
 				//lookup item language
@@ -2420,9 +2471,11 @@ FBL.ns(function() { with (FBL) {
 					//save this info to the example selection data array
 					//which will be used when the html panel is re-opened
 					//without a change in hmtl panel selection
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					Firebug.currentContext.getPanel('html').egselectiondata = [browser, node, 'elements', null];
 
 					//if the example-html panel is already open, populate it with this information
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 					{
 						tool.populateExamplePanel(browser, node, 'elements', null);
@@ -2432,6 +2485,7 @@ FBL.ns(function() { with (FBL) {
 					//and it will autopopulate with the saved data
 					else
 					{
+						// xxxFlorent: old: browser.chrome
 						Firebug.chrome.selectSidePanel(tool.panelnames['example-html']);
 					}
 
@@ -2598,6 +2652,7 @@ FBL.ns(function() { with (FBL) {
 					//	- this action is effectively identical to selecting an element
 					//	  and then switching to the reference tab manually
 					//but if it's not a special search, do a lookup search with the target
+					// xxxFlorent: old: browser.chrome
 					special == true
 						? Firebug.chrome.selectPanel(tool.panelnames['reference'])
 						: tool.lookupSearch(browser, node, type, owner);
@@ -2611,6 +2666,7 @@ FBL.ns(function() { with (FBL) {
 					var tool = Firebug.CodeBurner;
 
 					//save a reference to the examples panel
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-html']);
 
 					//save this info to the example selection data array
@@ -2629,6 +2685,7 @@ FBL.ns(function() { with (FBL) {
 					//and it will autopopulate with the saved data
 					else
 					{
+						// xxxFlorent: old: browser.chrome
 						Firebug.chrome.selectSidePanel(tool.panelnames['example-html']);
 					}
 				});
@@ -2798,11 +2855,13 @@ FBL.ns(function() { with (FBL) {
 					}
 
 					//get a reference to the appliable example pane
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					var egpanel = Firebug.currentContext.getPanel(
 						tool.panelnames['example-' + (panel.name == 'stylesheet' ? 'stylesheet' : 'html')])
 
 					//which will be used when the panel is re-opened
 					//without a change in hmtl panel selection
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					Firebug.currentContext.getPanel('html').egselectiondata = [browser, property, 'properties', null];
 
 					//if the example panel is already open
@@ -2816,6 +2875,7 @@ FBL.ns(function() { with (FBL) {
 					//and it will autopopulate with the saved data
 					else
 					{
+						// xxxFlorent: old: browser.chrome
 						Firebug.chrome.selectSidePanel(egpanel.name);
 					}
 				});
@@ -2867,9 +2927,11 @@ FBL.ns(function() { with (FBL) {
 					tool.splitter.setAttribute('collapsed', 'false');
 
 					//get a reference to the appliable example pane
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-stylesheet'])
 
 					//open the example panel
+					// xxxFlorent: old: browser.chrome
 					Firebug.chrome.selectSidePanel(egpanel.name);
 
 					//populate it with information about the first selector
@@ -2904,9 +2966,11 @@ FBL.ns(function() { with (FBL) {
 					tool.splitter.setAttribute('collapsed', 'false');
 
 					//get a reference to the appliable example pane
+					// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 					var egpanel = Firebug.currentContext.getPanel(tool.panelnames['example-stylesheet'])
 
 					//open the example panel
+					// xxxFlorent: old: browser.chrome
 					Firebug.chrome.selectSidePanel(egpanel.name);
 
 					//populate it with information about the at-rule
@@ -2935,6 +2999,7 @@ FBL.ns(function() { with (FBL) {
 			var tool = Firebug.CodeBurner;
 
 			//get the html panel and the browser reference
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			var htmlpanel = Firebug.currentContext.getPanel('html');
 			var browser = htmlpanel.context.browser;
 
@@ -2943,6 +3008,7 @@ FBL.ns(function() { with (FBL) {
 			var node = htmlpanel.selection.nodeName.toLowerCase();
 
 			//if the example-html panel is open,
+			// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 			if(Firebug.currentContext.getPanel(tool.panelnames['example-html']).visible == true)
 			{
 				//delete the selection data property, so that if you switch away and back
@@ -3202,6 +3268,7 @@ FBL.ns(function() { with (FBL) {
 			for(var i in this.panelnames)
 			{
 				if(!this.panelnames.hasOwnProperty(i) || !/example\-/.test(i)) { continue; }
+				// xxxFlorent: Note: FirebugContext is obsolete now. Use Firebug.currentContext instead
 				var panel = Firebug.currentContext.getPanel(this.panelnames[i]);
 				if(panel.visible == true)
 				{
@@ -3625,6 +3692,7 @@ FBL.ns(function() { with (FBL) {
 			//open our panel, and collapse its side deck
 			//(not usually necessary, but might be when firebug is detached
 			//and we haven't yet viewed the reference panel in this detachment session)
+			// xxxFlorent: old: browser.chrome
 			Firebug.chrome.selectPanel(this.panelnames['reference']);
 			this.collapseSidePanelsDeck();
 

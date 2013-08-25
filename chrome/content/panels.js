@@ -36,6 +36,7 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 
 	//add "help" to the options menu, which simply
 	//resets the search form and outputs the default text
+	// xxxFlorent: corrected indentation
 	getOptionsMenuItems: function()
 	{
 		return [{
@@ -54,6 +55,7 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 	//we can add the context menu this way because we control this panel
 	//the other context listeners we added were to other panels
 	//which is why we had to inject into them manually with event listeners
+	// xxxFlorent: corrected indentation
 	getContextMenuItems: function(style, target)
 	{
 		//allow for <u> term delimeter
@@ -88,6 +90,10 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 							.getElementsByTagName('a').item(0).getAttribute('href');
 						if(href) //just for safety
 						{
+							/* xxxFlorent: OLD ($('content') returns null):
+							 * try { $('content').addTab(href, null); }
+							 * catch(err) { $('content').addTab(href, {}); }
+							 */
 							// Open the link in a new tab using the Firebug API.
 							FBL.openNewTab(href);
 						}
@@ -122,6 +128,10 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 										Firebug.CodeBurner.queryTracker,
 										'/demo' + Firebug.CodeBurner.queryTracker
 										);
+									/* xxxFlorent: OLD ($('content') returns null):
+									 * try { $('content').addTab(href, null); }
+									 * catch(err) { $('content').addTab(href, {}); }
+									 */
 									// Open the link in a new tab using the Firebug API.
 									FBL.openNewTab(href);
 								}
@@ -138,6 +148,7 @@ CodeBurnerReferencePanel.prototype = extend(Firebug.Panel,
 
 	//this code comes straight from firebug - lock, stock, and the other thing
 	//it makes the search box top right work, to search through search results tables
+	// xxxFlorent: corrected indentation
 	search: function(text)
 	{
 		if (!text)
@@ -198,6 +209,7 @@ function CodeBurnerExampleHTMLPanel() {}
 CodeBurnerExampleHTMLPanel.prototype = extend(Firebug.Panel,
 {
 	name: Firebug.CodeBurner.panelnames['example-html'],
+	// xxxFlorent: corrected indentation
 	parentPanel: 'html',
 	title: Firebug.CodeBurner.lang.getString('tab.example'),
 	searchable: false,
@@ -215,6 +227,7 @@ function CodeBurnerExampleCSSPanel() {}
 CodeBurnerExampleCSSPanel.prototype = extend(Firebug.Panel,
 {
 	name: Firebug.CodeBurner.panelnames['example-stylesheet'],
+	// xxxFlorent: corrected indentation
 	parentPanel: 'stylesheet',
 	title: Firebug.CodeBurner.lang.getString('tab.example'),
 	searchable: false,
@@ -232,6 +245,7 @@ function CodeBurnerExampleReferencePanel() {}
 CodeBurnerExampleReferencePanel.prototype = extend(Firebug.Panel,
 {
 	name: Firebug.CodeBurner.panelnames['example-reference'],
+	// xxxFlorent: corrected indentation
 	parentPanel: Firebug.CodeBurner.panelnames['reference'],
 	title: Firebug.CodeBurner.lang.getString('tab.example'),
 	searchable: false,
@@ -256,6 +270,7 @@ Firebug.registerPanel(CodeBurnerReferencePanel);
 
 //if the firebug version is sufficient, register the example panes too
 //[if it isn't you'd never get the chance to open them anyway!]
+// xxxFlorent: isFirebugVersionOk()
 if(Firebug.CodeBurner.isFirebugVersionOk())
 {
 	Firebug.registerPanel(CodeBurnerExampleHTMLPanel);
