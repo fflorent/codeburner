@@ -13,11 +13,6 @@
 FBL.ns(function() { with (FBL) {
 
 
-
-
-
-	var Firefox = Firebug.require("firebug/chrome/firefox");
-
 	//firebug.codeburner object is the main dude
 	Firebug.CodeBurner = extend(Firebug.Module,
 	{
@@ -2268,7 +2263,7 @@ FBL.ns(function() { with (FBL) {
 			}
 
 			//get a browser reference and save it to args[0]
-			args[0] = Firefox.getCurrentBrowser();
+			args[0] = Firebug.currentContext.browser;
 
 			//show and uncollapse the side panels deck
 			//(we have to hide them when detaching firebug)
@@ -2281,13 +2276,13 @@ FBL.ns(function() { with (FBL) {
 			//save this info to the example selection args array
 			//which will be used when the panel is re-opened
 			//without a change in reference panel selection
-			Firebug.currentContext.getPanel(this.panelnames['reference']).egselectionargs = [args[0], args[1], args[2], args[3]];
+			Firebug.currentContext.getPanel(this.panelnames['reference']).egselectionargs = args.slice(0, 4);
 
 			//if the example panel is already open
 			//populate it with this information
 			if(egpanel.visible == true)
 			{
-				this.populateExamplePanel(args[0], args[1], args[2], args[3]);
+				this.populateExamplePanel.apply(null, args.slice(0, 4));
 			}
 
 			//otherwise just open the examples panel
